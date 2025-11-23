@@ -11,5 +11,8 @@
 public class Main {
         public static void main(String[] args) {
             System.out.println("Benvenuti nella biblioteca universitaria!");
+            //inizio test trive
+            System.out.println("Non abbiamo libri, vattene.");
+            //fine test trive
     }
 }
