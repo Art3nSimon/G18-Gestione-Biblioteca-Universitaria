@@ -14,5 +14,6 @@ public class Main {
             //inizio test trive
             System.out.println("Non abbiamo libri, vattene.");
             //fine test trive
+           System.out.println("Harry Potter è sopravvalutato, e lo dice Voldemort (che sarei io)");     
     }
 }
