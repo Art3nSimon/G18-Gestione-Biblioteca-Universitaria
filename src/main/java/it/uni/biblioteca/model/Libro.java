@@ -29,5 +29,11 @@ public class Libro {
         public String getCognome(){ 
             return cognome; 
         }
+        
+        //Metodo stampa Autore
+        @Override
+        public String toString() {
+            return cognome + " " + nome;
+        }
     }
 }
