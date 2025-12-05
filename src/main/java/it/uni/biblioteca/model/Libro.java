@@ -57,7 +57,7 @@ public class Libro {
         this.autori = new ArrayList<>();
     }
     
-    //Metodi Get Libro
+    //Metodi get Libro
     public String getIsbn(){ 
         return isbn; 
     }
