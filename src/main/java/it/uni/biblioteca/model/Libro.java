@@ -5,6 +5,9 @@
  */
 package it.uni.biblioteca.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Matteo
@@ -35,5 +38,47 @@ public class Libro {
         public String toString() {
             return cognome + " " + nome;
         }
+    }
+    //Attributi Libro
+    private String isbn;
+    private String titolo;
+    private List<Autore> autori;
+    private int annoPubblicazione;
+    private int numeroCopieTotali;
+    private int numeroCopieDisponibili;
+    
+    //Costruttore Libro
+    public Libro(String isbn, String titolo, int annoPubblicazione, int copie) {
+        this.isbn = isbn;
+        this.titolo = titolo;
+        this.annoPubblicazione = annoPubblicazione;
+        this.numeroCopieTotali = copie;
+        this.numeroCopieDisponibili = copie;
+        this.autori = new ArrayList<>();
+    }
+    
+    //Metodi Get Libro
+    public String getIsbn(){ 
+        return isbn; 
+    }
+    
+    public String getTitolo(){ 
+        return titolo; 
+    }
+    
+    public List<Autore> getAutori(){ 
+        return autori;
+    }
+    
+    public int getAnnoPubblicazione(){ 
+        return annoPubblicazione;
+    }
+    
+    public int getNumeroCopieDisponibili(){ 
+        return numeroCopieDisponibili; 
+    }
+    
+    public int getNumeroCopieTotali(){ 
+        return numeroCopieTotali; 
     }
 }
