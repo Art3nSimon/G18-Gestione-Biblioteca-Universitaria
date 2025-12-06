@@ -1,1 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.uni.biblioteca.controller.MainController"
+            fx:id="mainBorderPane"
+            prefHeight="800.0" prefWidth="1200.0"
+            styleClass="root">
+    
+    <!-- TOP: Menu Bar -->
+    <top>
+        <MenuBar styleClass="menu-bar">
+            <Menu text="File">
+                <MenuItem text="Esci" onAction="#esci"/>
+            </Menu>
+            
+            <Menu text="Gestione">
+                <MenuItem text="Gestione Libri" onAction="#apriGestioneLibri"/>
+                <MenuItem text="Gestione Utenti" onAction="#apriGestioneUtenti"/>
+                <MenuItem text="Gestione Prestiti" onAction="#apriGestionePrestiti"/>
+            </Menu>
+            
+            <Menu text="Aiuto">
+                <MenuItem text="Informazioni" onAction="#mostraInformazioni"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    
+    <!-- CENTER: Area centrale per caricare le view -->
+    <!-- Il contenuto viene caricato dinamicamente dal MainController -->
+    
+    <!-- BOTTOM: Status Bar -->
+    <bottom>
+        <HBox styleClass="status-bar" spacing="20.0" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="8.0" right="15.0" bottom="8.0" left="15.0"/>
+            </padding>
+            <Label text="Sistema Gestione Biblioteca Universitaria - Pronto" styleClass="status-label"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane>
