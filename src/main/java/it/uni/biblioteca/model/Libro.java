@@ -98,5 +98,8 @@ public class Libro {
             numeroCopieDisponibili++;
         }
     }
-    //Esperimento Package
+    
+    public boolean isDisponibile() {
+        return numeroCopieDisponibili > 0;
+    }
 }
