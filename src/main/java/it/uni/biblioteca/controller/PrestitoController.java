@@ -24,7 +24,7 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Armando
+ * @author Utente
  */
 public class PrestitoController {
     
