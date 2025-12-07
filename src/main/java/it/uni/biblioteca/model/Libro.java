@@ -110,4 +110,13 @@ public class Libro {
     public boolean isDisponibile() {
         return numeroCopieDisponibili > 0;
     }
+    
+    public String getAutoriAsString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < autori.size(); i++) {
+            sb.append(autori.get(i).toString());
+            if (i < autori.size() - 1) sb.append(", ");
+        }
+        return sb.toString();
+    }
 }
