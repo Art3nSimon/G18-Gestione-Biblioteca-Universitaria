@@ -1,1 +1,58 @@
+/* ============================================
+   SISTEMA GESTIONE BIBLIOTECA UNIVERSITARIA
+   ============================================ */
+
+/* ============================================
+   STILI GLOBALI
+   ============================================ */
+
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #ecf0f1;
+}
+
+/* ============================================
+   MENU BAR (MainView)
+   ============================================ */
+
+.menu-bar {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 5px;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.menu-bar .menu-item {
+    -fx-background-color: white;
+}
+
+.menu-bar .menu-item:hover {
+    -fx-background-color: #3498db;
+}
+
+.menu-bar .menu-item .label {
+    -fx-text-fill: #2c3e50;
+}
+
+.menu-bar .menu-item:hover .label {
+    -fx-text-fill: white;
+}
+
+/* ============================================
+   STATUS BAR
+   ============================================ */
+
+.status-bar {
+    -fx-background-color: #34495e;
+    -fx-padding: 8px 15px;
+}
+
+.status-label {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
 
