@@ -57,7 +57,7 @@ public class Libro {
         this.autori = new ArrayList<>();
     }
     
-    //Metodi get Libro
+    //Metodi get e set Libro
     public String getIsbn(){ 
         return isbn; 
     }
@@ -80,6 +80,14 @@ public class Libro {
     
     public int getNumeroCopieTotali(){ 
         return numeroCopieTotali; 
+    }
+    
+    public void setTitolo(String titolo){
+        this.titolo = titolo;
+    }
+    
+    public void setAnnoPubblicazione(int anno){
+        this.annoPubblicazione = anno;
     }
     
     //Altri metodi Libro

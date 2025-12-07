@@ -45,4 +45,20 @@ public class Utente {
     public String getEmail() {
         return email;
     }
+    
+    public List<Prestito> getPrestitiAttivi() {
+        return new ArrayList<>(prestitiAttivi);
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
