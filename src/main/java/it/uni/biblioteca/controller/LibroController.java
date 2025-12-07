@@ -244,5 +244,3 @@ public class LibroController {
         }
     }
 }
-
-//prova package 
