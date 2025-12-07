@@ -57,7 +57,7 @@ public class Libro {
         this.autori = new ArrayList<>();
     }
     
-    //Metodi get Libro
+    //Metodi get e set Libro
     public String getIsbn(){ 
         return isbn; 
     }
@@ -82,6 +82,14 @@ public class Libro {
         return numeroCopieTotali; 
     }
     
+    public void setTitolo(String titolo){
+        this.titolo = titolo;
+    }
+    
+    public void setAnnoPubblicazione(int anno){
+        this.annoPubblicazione = anno;
+    }
+    
     //Altri metodi Libro
     public void aggiungiAutore(Autore autore) {
         autori.add(autore);
@@ -101,5 +109,14 @@ public class Libro {
     
     public boolean isDisponibile() {
         return numeroCopieDisponibili > 0;
+    }
+    
+    public String getAutoriAsString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < autori.size(); i++) {
+            sb.append(autori.get(i).toString());
+            if (i < autori.size() - 1) sb.append(", ");
+        }
+        return sb.toString();
     }
 }
