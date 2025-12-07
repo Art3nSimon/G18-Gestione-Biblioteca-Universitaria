@@ -50,6 +50,14 @@ public class Utente {
         return new ArrayList<>(prestitiAttivi);
     }
     
+    public int getNumeroPrestitiAttivi() {
+        return prestitiAttivi.size();
+    }
+    
+    public String getNomeCognome() {
+        return cognome + " " + nome;
+    }
+    
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -63,8 +71,18 @@ public class Utente {
     }
     
     //Altri metodi Utente
-    public String getNomeCognome() {
-        return cognome + " " + nome;
+    public boolean haRaggiuntoLimite() {
+        return prestitiAttivi.size() >= 3;
+    }
+    
+    public void aggiungiPrestito(Prestito prestito) {
+        if (!prestitiAttivi.contains(prestito)) {
+            prestitiAttivi.add(prestito);
+        }
+    }
+    
+    public void rimuoviPrestito(Prestito prestito) {
+        prestitiAttivi.remove(prestito);
     }
     
     @Override
