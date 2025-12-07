@@ -81,4 +81,9 @@ public class Libro {
     public int getNumeroCopieTotali(){ 
         return numeroCopieTotali; 
     }
+    
+    //Altri metodi Libro
+    public void aggiungiAutore(Autore autore) {
+        autori.add(autore);
+    }
 }
