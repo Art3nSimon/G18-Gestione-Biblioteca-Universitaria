@@ -98,5 +98,4 @@ public class Libro {
             numeroCopieDisponibili++;
         }
     }
-    
 }
