@@ -61,4 +61,27 @@ public class Utente {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    //Altri metodi Utente
+    public String getNomeCognome() {
+        return cognome + " " + nome;
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Utente utente = (Utente) obj;
+        return matricola.equals(utente.matricola);
+    }
+    
+    @Override
+    public int hashCode() {
+        return matricola.hashCode();
+    }
+    
+    @Override
+    public String toString() {
+        return getNomeCognome() + " (" + matricola + ")";
+    }
 }
