@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.uni.biblioteca.controller.UtenteController"
+            styleClass="content-pane">
+    
+    <!-- TOP: Barra di ricerca -->
+    <top>
+        <VBox styleClass="search-box" spacing="10.0">
+            <padding>
+                <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+            </padding>
+            
+            <Label text="Ricerca Utenti" styleClass="section-title"/>
+            
+            <HBox spacing="10.0" alignment="CENTER_LEFT">
+                <Label text="Criterio:" minWidth="70.0"/>
+                <ComboBox fx:id="comboCriterio" prefWidth="150.0"/>
+                
+                <TextField fx:id="fieldRicerca" 
+                          promptText="Inserisci termine di ricerca..."
+                          HBox.hgrow="ALWAYS"/>
+                
+                <Button text="Cerca" onAction="#cercaUtente" styleClass="button"/>
+                <Button text="Mostra Tutti" onAction="#mostraTuttiUtenti" styleClass="button-annulla"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <!-- CENTER: Tabella utenti -->
+    <center>
+        <TableView fx:id="tabellaUtenti" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="colonnaMatricola" text="Matricola" prefWidth="100.0"/>
+                <TableColumn fx:id="colonnaCognome" text="Cognome" prefWidth="150.0"/>
+                <TableColumn fx:id="colonnaNome" text="Nome" prefWidth="150.0"/>
+                <TableColumn fx:id="colonnaEmail" text="Email" prefWidth="250.0"/>
+                <TableColumn fx:id="colonnaPrestiti" text="Prestiti" prefWidth="80.0"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </center>
+    
+    <!-- BOTTOM: Bottoni azione -->
+    <bottom>
+        <HBox spacing="10.0" alignment="CENTER" styleClass="button-bar">
+            <padding>
+                <Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/>
+            </padding>
+            
+            <Button text="Inserisci Utente" onAction="#inserisciUtente" styleClass="button"/>
+            <Button text="Modifica" onAction="#modificaUtente" styleClass="button"/>
+            <Button text="Elimina" onAction="#eliminaUtente" styleClass="button-elimina"/>
+        </HBox>
+    </bottom>
+    
+</BorderPane>

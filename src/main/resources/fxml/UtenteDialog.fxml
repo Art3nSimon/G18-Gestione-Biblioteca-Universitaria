@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="it.uni.biblioteca.controller.UtenteDialogController"
+      spacing="15.0" styleClass="dialog-pane"
+      prefWidth="500.0" prefHeight="450.0">
+    
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+    
+    <!-- Titolo Dialog -->
+    <Label text="INSERISCI/MODIFICA UTENTE" styleClass="dialog-title"/>
+    
+    <Separator/>
+    
+    <!-- Sezione Dati Utente -->
+    <Label text="Dati Utente" styleClass="subsection-title"/>
+    
+    <GridPane hgap="10.0" vgap="15.0">
+        <columnConstraints>
+            <ColumnConstraints minWidth="120.0"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        
+        <!-- Riga 0: Nome -->
+        <Label text="Nome: *" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="fieldNome" promptText="es. Mario"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <!-- Riga 1: Cognome -->
+        <Label text="Cognome: *" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="fieldCognome" promptText="es. Rossi"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <!-- Riga 2: Matricola -->
+        <Label text="Matricola: *" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="fieldMatricola" promptText="es. 123456"
+                  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        
+        <!-- Riga 3: Email -->
+        <Label text="Email: *" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="fieldEmail" promptText="es. m.rossi@studenti.unisa.it"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+    
+    <Separator/>
+    
+    <!-- Sezione Informazioni (visibile solo in modifica) -->
+    <VBox spacing="5.0" styleClass="info-box">
+        <Label fx:id="labelPrestitiAttivi" text="Prestiti Attivi: 0" 
+               styleClass="info-label" managed="false" visible="false"/>
+        <Label fx:id="labelStato" text="Stato: ✓ Può effettuare prestiti" 
+               styleClass="info-label" managed="false" visible="false"/>
+    </VBox>
+    
+    <Separator/>
+    
+    <!-- Note -->
+    <Label text="* = Campo obbligatorio" styleClass="note-label"/>
+    <Label text="Nota: La matricola non può essere modificata dopo l'inserimento" 
+           styleClass="note-label" wrapText="true"/>
+    
+    <!-- Bottoni Azione -->
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="✓ Conferma" onAction="#conferma" 
+                styleClass="button-conferma" prefWidth="150.0"/>
+        <Button text="✗ Annulla" onAction="#annulla" 
+                styleClass="button-annulla" prefWidth="150.0"/>
+    </HBox>
+    
+</VBox>
+
