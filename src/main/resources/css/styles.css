@@ -56,3 +56,345 @@
     -fx-font-size: 12px;
 }
 
+
+/* ============================================
+   CONTENT PANE
+   ============================================ */
+
+.content-pane {
+    -fx-background-color: #ecf0f1;
+}
+
+/* ============================================
+   SECTION TITLES
+   ============================================ */
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.subsection-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+.dialog-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* ============================================
+   SEARCH BOX
+   ============================================ */
+
+.search-box {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+/* ============================================
+   BOTTONI
+   ============================================ */
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.button:pressed {
+    -fx-background-color: #1c5987;
+}
+
+/* Bottone Elimina (rosso) */
+.button-elimina {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button-elimina:hover {
+    -fx-background-color: #c0392b;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Bottone Conferma (verde) */
+.button-conferma {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button-conferma:hover {
+    -fx-background-color: #229954;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Bottone Annulla (grigio) */
+.button-annulla {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button-annulla:hover {
+    -fx-background-color: #7f8c8d;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* ============================================
+   BUTTON BAR
+   ============================================ */
+
+.button-bar {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, -2);
+}
+
+/* ============================================
+   TABELLE
+   ============================================ */
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #34495e;
+    -fx-padding: 12px 10px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.table-view .table-cell {
+    -fx-padding: 10px 8px;
+    -fx-border-color: transparent transparent #ececec transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3498db;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e8f4f8;
+}
+
+/* ============================================
+   FORM INPUTS
+   ============================================ */
+
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused, .text-area:focused, 
+.combo-box:focused, .date-picker:focused {
+    -fx-border-color: #3498db;
+    -fx-border-width: 2px;
+    -fx-background-color: #f0f8ff;
+}
+
+.text-field-error {
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffebee;
+}
+
+/* ============================================
+   DIALOG PANE
+   ============================================ */
+
+.dialog-pane {
+    -fx-background-color: #f5f5f5;
+}
+
+/* ============================================
+   LIST VIEW
+   ============================================ */
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+.list-cell {
+    -fx-padding: 8px;
+}
+
+.list-cell:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.list-cell:hover {
+    -fx-background-color: #e8f4f8;
+}
+
+/* ============================================
+   LABELS
+   ============================================ */
+
+.label {
+    -fx-text-fill: #2c3e50;
+}
+
+.note-label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+.info-label {
+    -fx-font-size: 13px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 3px;
+}
+
+/* ============================================
+   INFO BOX
+   ============================================ */
+
+.info-box {
+    -fx-background-color: #e8f4f8;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+/* ============================================
+   PRESTITI HEADER
+   ============================================ */
+
+.prestiti-header {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+}
+
+.stats-box {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 5px;
+}
+
+.stats-box .label {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* ============================================
+   SEPARATOR
+   ============================================ */
+
+.separator {
+    -fx-background-color: #bdc3c7;
+}
+
+/* ============================================
+   SCROLL BAR
+   ============================================ */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #bdc3c7;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #95a5a6;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #ecf0f1;
+}
+
+/* ============================================
+   TOOLTIP
+   ============================================ */
+
+.tooltip {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-padding: 8px 10px;
+    -fx-background-radius: 5px;
+}
+
+/* ============================================
+   ALERT DIALOG
+   ============================================ */
+
+.alert {
+    -fx-background-color: white;
+}
+
+.alert .header-panel {
+    -fx-padding: 15px;
+}
+
+.alert.error .header-panel {
+    -fx-background-color: #e74c3c;
+}
+
+.alert.confirmation .header-panel {
+    -fx-background-color: #27ae60;
+}
+
+.alert.information .header-panel {
+    -fx-background-color: #3498db;
+}
+
+.alert.warning .header-panel {
+    -fx-background-color: #f39c12;
+}
