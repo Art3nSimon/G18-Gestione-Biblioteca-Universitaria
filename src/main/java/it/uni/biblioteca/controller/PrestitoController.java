@@ -244,7 +244,7 @@ public class PrestitoController {
         String dettagli = "Utente: " + selezionato.getUtente().getNomeCognome() + "\n" +
                           "Libro: " + selezionato.getLibro().getTitolo() + "\n" +
                           "Data Prestito: " + selezionato.getDataPrestito() + "\n" +
-                          "Scadenza: " + selezionato.getDataRestituzioneRevista() + "\n" +
+                          "Scadenza: " + selezionato.getDataRestituzionePrevista() + "\n" +
                           "Stato: " + selezionato.getStatoDescrizione();
         
         if (selezionato.isInRitardo()) {
