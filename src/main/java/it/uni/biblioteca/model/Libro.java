@@ -86,4 +86,16 @@ public class Libro {
     public void aggiungiAutore(Autore autore) {
         autori.add(autore);
     }
+    
+    public void decrementaCopie() {
+        if (numeroCopieDisponibili > 0) {
+            numeroCopieDisponibili--;
+        }
+    }
+    
+    public void incrementaCopie() {
+        if (numeroCopieDisponibili < numeroCopieTotali) {
+            numeroCopieDisponibili++;
+        }
+    }
 }
