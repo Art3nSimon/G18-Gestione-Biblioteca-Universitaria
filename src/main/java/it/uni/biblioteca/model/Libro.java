@@ -5,6 +5,7 @@
  */
 package it.uni.biblioteca.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,9 +13,9 @@ import java.util.List;
  *
  * @author Matteo
  */
-public class Libro {
+public class Libro implements Serializable{
     //Classe annidata Autore
-    public static class Autore{
+    public static class Autore implements Serializable{
         //Attributi Autore
         private String nome;
         private String cognome;

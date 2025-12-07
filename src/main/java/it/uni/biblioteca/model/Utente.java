@@ -5,6 +5,7 @@
  */
 package it.uni.biblioteca.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,9 @@ import java.util.List;
  *
  * @author Matteo
  */
-public class Utente {
+public class Utente implements Serializable{
+    private static final long serialVersionUID = 1L;
+    
     //Attributi Utente
     private String matricola;
     private String nome;
