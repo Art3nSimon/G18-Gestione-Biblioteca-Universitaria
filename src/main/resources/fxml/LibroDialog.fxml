@@ -1,0 +1,93 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="700.0" prefWidth="600.0" spacing="15.0" styleClass="dialog-pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.uni.biblioteca.controller.LibroDialogController">
+    
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+       
+       <!-- Titolo Dialog -->
+       <Label styleClass="dialog-title" text="➕INSERISCI/MODIFICA LIBRO" />
+       
+       <Separator />
+       
+       <!-- Sezione Dati Libro -->
+       <Label styleClass="subsection-title" text="Dati Libro" />
+       
+       <GridPane hgap="10.0" vgap="10.0">
+           <columnConstraints>
+               <ColumnConstraints minWidth="120.0" />
+               <ColumnConstraints hgrow="ALWAYS" />
+           </columnConstraints>
+          <children>
+              
+              <!-- Riga 0: Titolo -->
+              <Label text="Titolo: *" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+              <TextField fx:id="fieldTitolo" promptText="es. Il Signore degli Anelli" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+              
+              <!-- Riga 1: ISBN -->
+              <Label text="ISBN: *" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+              <TextField fx:id="fieldIsbn" promptText="es. 978-88-04-12345-6" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              
+              <!-- Riga 2: Anno -->
+              <Label text="Anno Pubbl.: *" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+              <TextField fx:id="fieldAnno" promptText="es. 2024" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+              
+              <!-- Riga 3: Copie -->
+              <Label text="Num. Copie: *" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+              <TextField fx:id="fieldCopie" promptText="es. 5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          </children>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+       </GridPane>
+       
+       <Separator />
+       
+       <!-- Sezione Autori -->
+       <Label styleClass="subsection-title" text="Autori (almeno 1)" />
+       
+       <ListView fx:id="listaAutori" prefHeight="150.0" styleClass="list-view" />
+       
+       <Label text="Aggiungi Autore:" />
+       
+       <HBox alignment="CENTER_LEFT" spacing="10.0">
+          <children>
+              <Label minWidth="60.0" text="Nome:" />
+              <TextField fx:id="fieldNomeAutore" prefWidth="180.0" promptText="es. Mario" />
+              
+              <Label minWidth="70.0" text="Cognome:" />
+              <TextField fx:id="fieldCognomeAutore" prefWidth="180.0" promptText="es. Rossi" />
+              
+              <Button onAction="#aggiungiAutore" styleClass="button" text="➕ Aggiungi" />
+          </children>
+       </HBox>
+       
+       <Button maxWidth="Infinity" onAction="#rimuoviAutore" styleClass="button-annulla" text="➖ Rimuovi Selezionato" />
+       
+       <Separator />
+       
+       <!-- Note -->
+       <Label styleClass="note-label" text="* = Campo obbligatorio" />
+       
+       <!-- Bottoni Azione -->
+       <HBox alignment="CENTER" spacing="10.0">
+          <children>
+              <Button onAction="#conferma" prefWidth="150.0" styleClass="button-conferma" text="✓ Conferma" />
+              <Button onAction="#annulla" prefWidth="150.0" styleClass="button-annulla" text="✗ Annulla" />
+          </children>
+       </HBox>
+   </children>
+    
+</VBox>
