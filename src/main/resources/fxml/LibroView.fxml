@@ -1,0 +1,68 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="content-pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.uni.biblioteca.controller.LibroController">
+    
+    <!-- TOP: Barra di ricerca -->
+    <top>
+        <VBox spacing="10.0" styleClass="search-box">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+           <children>
+               
+               <Label styleClass="section-title" text="🔍 Ricerca Libri" />
+               
+               <HBox alignment="CENTER_LEFT" spacing="10.0">
+                  <children>
+                      <Label minWidth="70.0" text="Criterio:" />
+                      <ComboBox fx:id="comboCriterio" prefWidth="150.0" />
+                      
+                      <TextField fx:id="fieldRicerca" promptText="Inserisci termine di ricerca..." HBox.hgrow="ALWAYS" />
+                      
+                      <Button onAction="#cercaLibro" styleClass="button" text="Cerca" />
+                      <Button onAction="#mostraTuttiLibri" styleClass="button-annulla" text="↻ Mostra Tutti" />
+                  </children>
+               </HBox>
+           </children>
+        </VBox>
+    </top>
+    
+    <!-- CENTER: Tabella libri -->
+    <center>
+        <TableView fx:id="tabellaLibri" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="colonnaTitolo" prefWidth="250.0" text="Titolo" />
+                <TableColumn fx:id="colonnaAutori" prefWidth="200.0" text="Autori" />
+                <TableColumn fx:id="colonnaAnno" prefWidth="80.0" text="Anno" />
+                <TableColumn fx:id="colonnaIsbn" prefWidth="150.0" text="ISBN" />
+                <TableColumn fx:id="colonnaCopie" prefWidth="100.0" text="Copie Disp." />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </center>
+    
+    <!-- BOTTOM: Bottoni azione -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10.0" styleClass="button-bar">
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+            </padding>
+           <children>
+               
+               <Button onAction="#inserisciLibro" styleClass="button" text="➕ Inserisci Libro" />
+               <Button onAction="#modificaLibro" styleClass="button" text="Modifica" />
+               <Button onAction="#eliminaLibro" styleClass="button-elimina" text="Elimina" />
+           </children>
+        </HBox>
+    </bottom>
+    
+</BorderPane>

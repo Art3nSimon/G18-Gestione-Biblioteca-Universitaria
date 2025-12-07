@@ -13,7 +13,7 @@ import javafx.scene.layout.BorderPane;
 
 /**
  *
- * @author Matteo
+ * @author Simona
  */
 public class MainController {
     
