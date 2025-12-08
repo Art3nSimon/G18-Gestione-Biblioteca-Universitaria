@@ -1,0 +1,12 @@
+<map id="it.uni.biblioteca.model.Prestito.isInRitardo" name="it.uni.biblioteca.model.Prestito.isInRitardo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="662,64,814,107"/>
+<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#a90764a730b6c567ae6e005acc8764a0f" title=" " alt="" coords="446,5,610,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="645,60,606,51,607,46,650,60"/>
+<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#aeb4fff51b529869750d69696b0ddaa15" title=" " alt="" coords="205,35,393,77"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="644,80,393,65,393,60,649,78"/>
+<area shape="rect" id="Node000005" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_prestito_controller.html#a0a66e27efcf117ee83dd68820d719306" title=" " alt="" coords="441,123,614,165"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="650,110,607,125,606,119,645,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="428,40,394,47,393,41,433,39"/>
+<area shape="rect" id="Node000004" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#ad6669c798ac71654b67b1f7e99ee7c8e" title=" " alt="" coords="5,35,157,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="187,57,157,59,156,53,192,55"/>
+</map>

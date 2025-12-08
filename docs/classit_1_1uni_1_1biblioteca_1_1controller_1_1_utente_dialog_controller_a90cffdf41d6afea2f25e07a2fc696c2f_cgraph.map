@@ -1,0 +1,15 @@
+<map id="it.uni.biblioteca.controller.UtenteDialogController.setUtente" name="it.uni.biblioteca.controller.UtenteDialogController.setUtente">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,172,220,215"/>
+<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html#a666066cdcf5e50d05943059f98454042" title=" " alt="" coords="292,5,443,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,170,189,114,226,84,266,58,279,53,275,57,269,62,229,89,193,118,136,173"/>
+<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html#ab5c2cf9daa1442c88ef994f7ba951c6c" title=" " alt="" coords="292,72,443,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,169,267,124,287,119,282,122,269,129,163,174"/>
+<area shape="rect" id="Node000004" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html#a7eced3164ff5e1f80777745a61b59f44" title=" " alt="" coords="292,139,443,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,177,279,171,274,173,221,182"/>
+<area shape="rect" id="Node000005" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html#afe70537ae649b30e4e5422b788ae0146" title=" " alt="" coords="292,205,443,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="220,205,279,214,274,216,220,210"/>
+<area shape="rect" id="Node000006" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html#ae8961580b77c25311047879f7c4d1017" title=" " alt="" coords="268,272,467,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="162,213,269,258,287,266,282,267,267,262,161,218"/>
+<area shape="rect" id="Node000007" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html#a46f9cf80a34efe9d92630ae1544c758c" title=" " alt="" coords="281,339,454,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="134,213,193,268,229,298,269,324,280,332,275,331,266,329,226,302,189,272,133,218"/>
+</map>

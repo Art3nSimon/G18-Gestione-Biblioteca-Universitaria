@@ -1,0 +1,284 @@
+\doxysection{it.\+uni.\+biblioteca.\+model.\+Biblioteca Class Reference}
+\hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca}{}\label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+
+
+Inheritance diagram for it.\+uni.\+biblioteca.\+model.\+Biblioteca\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for it.\+uni.\+biblioteca.\+model.\+Biblioteca\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_ac6ef7b0aaa40f5177e58f877e9755629}{aggiungi\+Libro}} (\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} libro)  throws Exception 
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af48778be8f9d9899c818a8de84269a8d}{modifica\+Libro}} (\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} libro)  throws Exception 
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a9901049f383794effd91ea23a30ffe53}{elimina\+Libro}} (String isbn)  throws Exception 
+\item 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} $>$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a58f35b8d75ba862ce28f78594b9c3ad8}{get\+Tutti\+Libri}} ()
+\item 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} $>$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af716dbe6475b6a100ce61caf2e8b4b30}{cerca\+Libri}} (String criterio, String tipo)
+\item 
+\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a7a7635db454d5546513ba21a6b9c87d2}{cerca\+Libro\+Per\+Isbn}} (String isbn)
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a29825ff90cfc3b3760b4f319053c02f7}{aggiungi\+Utente}} (\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} utente)  throws Exception 
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0df291d99a6ec9654dc2a890569c1e6f}{modifica\+Utente}} (\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} utente)  throws Exception 
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a3cccf8d06fa3e5372ab05e0f04c45f35}{elimina\+Utente}} (String matricola)  throws Exception 
+\item 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} $>$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af7d293787d3abc94f69d849238e1a90e}{get\+Tutti\+Utenti}} ()
+\item 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} $>$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0a9c1be7fe0c4ae151f3c4be287527cc}{cerca\+Utenti}} (String criterio, String tipo)
+\item 
+\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0bb641ab1d93e213a06d0973645dfe03}{cerca\+Utente\+Per\+Matricola}} (String matricola)
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1e2abce6d907356fd9cfa09f60694ae8}{registra\+Prestito}} (String matricola, String isbn, Local\+Date data\+Restituzione)  throws Exception 
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a2932e5755c693c08733fa3ec99466186}{registra\+Restituzione}} (\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito}{Prestito}} prestito)  throws Exception 
+\item 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito}{Prestito}} $>$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a59107129f92f0c40deaa539f07e9468a}{get\+Prestiti\+Attivi}} ()
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_aa1b63a83eb44e828c0d13cbd2a347171}{salva\+Dati}} ()
+\item 
+void \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1d99a12c3b667d56979ea7c9752a811d}{carica\+Dati}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Biblioteca \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0255ab6a90ce5b0b4c5c8dd9efa3e80e}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Matteo 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_ac6ef7b0aaa40f5177e58f877e9755629}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!aggiungiLibro@{aggiungiLibro}}
+\index{aggiungiLibro@{aggiungiLibro}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{aggiungiLibro()}{aggiungiLibro()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_ac6ef7b0aaa40f5177e58f877e9755629} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+aggiungi\+Libro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}}}]{libro}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_ac6ef7b0aaa40f5177e58f877e9755629_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a29825ff90cfc3b3760b4f319053c02f7}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!aggiungiUtente@{aggiungiUtente}}
+\index{aggiungiUtente@{aggiungiUtente}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{aggiungiUtente()}{aggiungiUtente()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a29825ff90cfc3b3760b4f319053c02f7} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+aggiungi\+Utente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}}}]{utente}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a29825ff90cfc3b3760b4f319053c02f7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1d99a12c3b667d56979ea7c9752a811d}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!caricaDati@{caricaDati}}
+\index{caricaDati@{caricaDati}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{caricaDati()}{caricaDati()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1d99a12c3b667d56979ea7c9752a811d} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+carica\+Dati (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1d99a12c3b667d56979ea7c9752a811d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af716dbe6475b6a100ce61caf2e8b4b30}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!cercaLibri@{cercaLibri}}
+\index{cercaLibri@{cercaLibri}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{cercaLibri()}{cercaLibri()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af716dbe6475b6a100ce61caf2e8b4b30} 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} $>$ it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+cerca\+Libri (\begin{DoxyParamCaption}\item[{String}]{criterio}{, }\item[{String}]{tipo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a7a7635db454d5546513ba21a6b9c87d2}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!cercaLibroPerIsbn@{cercaLibroPerIsbn}}
+\index{cercaLibroPerIsbn@{cercaLibroPerIsbn}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{cercaLibroPerIsbn()}{cercaLibroPerIsbn()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a7a7635db454d5546513ba21a6b9c87d2} 
+\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+cerca\+Libro\+Per\+Isbn (\begin{DoxyParamCaption}\item[{String}]{isbn}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a7a7635db454d5546513ba21a6b9c87d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0bb641ab1d93e213a06d0973645dfe03}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!cercaUtentePerMatricola@{cercaUtentePerMatricola}}
+\index{cercaUtentePerMatricola@{cercaUtentePerMatricola}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{cercaUtentePerMatricola()}{cercaUtentePerMatricola()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0bb641ab1d93e213a06d0973645dfe03} 
+\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+cerca\+Utente\+Per\+Matricola (\begin{DoxyParamCaption}\item[{String}]{matricola}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0bb641ab1d93e213a06d0973645dfe03_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0a9c1be7fe0c4ae151f3c4be287527cc}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!cercaUtenti@{cercaUtenti}}
+\index{cercaUtenti@{cercaUtenti}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{cercaUtenti()}{cercaUtenti()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0a9c1be7fe0c4ae151f3c4be287527cc} 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} $>$ it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+cerca\+Utenti (\begin{DoxyParamCaption}\item[{String}]{criterio}{, }\item[{String}]{tipo}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a9901049f383794effd91ea23a30ffe53}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!eliminaLibro@{eliminaLibro}}
+\index{eliminaLibro@{eliminaLibro}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{eliminaLibro()}{eliminaLibro()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a9901049f383794effd91ea23a30ffe53} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+elimina\+Libro (\begin{DoxyParamCaption}\item[{String}]{isbn}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a9901049f383794effd91ea23a30ffe53_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a3cccf8d06fa3e5372ab05e0f04c45f35}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!eliminaUtente@{eliminaUtente}}
+\index{eliminaUtente@{eliminaUtente}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{eliminaUtente()}{eliminaUtente()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a3cccf8d06fa3e5372ab05e0f04c45f35} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+elimina\+Utente (\begin{DoxyParamCaption}\item[{String}]{matricola}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a3cccf8d06fa3e5372ab05e0f04c45f35_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0255ab6a90ce5b0b4c5c8dd9efa3e80e}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0255ab6a90ce5b0b4c5c8dd9efa3e80e} 
+Biblioteca it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0255ab6a90ce5b0b4c5c8dd9efa3e80e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a59107129f92f0c40deaa539f07e9468a}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!getPrestitiAttivi@{getPrestitiAttivi}}
+\index{getPrestitiAttivi@{getPrestitiAttivi}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{getPrestitiAttivi()}{getPrestitiAttivi()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a59107129f92f0c40deaa539f07e9468a} 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito}{Prestito}} $>$ it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+get\+Prestiti\+Attivi (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a59107129f92f0c40deaa539f07e9468a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a58f35b8d75ba862ce28f78594b9c3ad8}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!getTuttiLibri@{getTuttiLibri}}
+\index{getTuttiLibri@{getTuttiLibri}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{getTuttiLibri()}{getTuttiLibri()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a58f35b8d75ba862ce28f78594b9c3ad8} 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}} $>$ it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+get\+Tutti\+Libri (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af7d293787d3abc94f69d849238e1a90e}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!getTuttiUtenti@{getTuttiUtenti}}
+\index{getTuttiUtenti@{getTuttiUtenti}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{getTuttiUtenti()}{getTuttiUtenti()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af7d293787d3abc94f69d849238e1a90e} 
+List$<$ \mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}} $>$ it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+get\+Tutti\+Utenti (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af48778be8f9d9899c818a8de84269a8d}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!modificaLibro@{modificaLibro}}
+\index{modificaLibro@{modificaLibro}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{modificaLibro()}{modificaLibro()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af48778be8f9d9899c818a8de84269a8d} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+modifica\+Libro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_libro}{Libro}}}]{libro}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_af48778be8f9d9899c818a8de84269a8d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0df291d99a6ec9654dc2a890569c1e6f}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!modificaUtente@{modificaUtente}}
+\index{modificaUtente@{modificaUtente}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{modificaUtente()}{modificaUtente()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0df291d99a6ec9654dc2a890569c1e6f} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+modifica\+Utente (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_utente}{Utente}}}]{utente}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a0df291d99a6ec9654dc2a890569c1e6f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1e2abce6d907356fd9cfa09f60694ae8}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!registraPrestito@{registraPrestito}}
+\index{registraPrestito@{registraPrestito}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{registraPrestito()}{registraPrestito()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1e2abce6d907356fd9cfa09f60694ae8} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+registra\+Prestito (\begin{DoxyParamCaption}\item[{String}]{matricola}{, }\item[{String}]{isbn}{, }\item[{Local\+Date}]{data\+Restituzione}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a1e2abce6d907356fd9cfa09f60694ae8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a2932e5755c693c08733fa3ec99466186}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!registraRestituzione@{registraRestituzione}}
+\index{registraRestituzione@{registraRestituzione}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{registraRestituzione()}{registraRestituzione()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a2932e5755c693c08733fa3ec99466186} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+registra\+Restituzione (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito}{Prestito}}}]{prestito}{}\end{DoxyParamCaption}) throws Exception}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_a2932e5755c693c08733fa3ec99466186_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_aa1b63a83eb44e828c0d13cbd2a347171}\index{it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}!salvaDati@{salvaDati}}
+\index{salvaDati@{salvaDati}!it.uni.biblioteca.model.Biblioteca@{it.uni.biblioteca.model.Biblioteca}}
+\doxysubsubsection{\texorpdfstring{salvaDati()}{salvaDati()}}
+{\footnotesize\ttfamily \label{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_aa1b63a83eb44e828c0d13cbd2a347171} 
+void it.\+uni.\+biblioteca.\+model.\+Biblioteca.\+salva\+Dati (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca_aa1b63a83eb44e828c0d13cbd2a347171_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/it/uni/biblioteca/model/\mbox{\hyperlink{_biblioteca_8java}{Biblioteca.\+java}}\end{DoxyCompactItemize}

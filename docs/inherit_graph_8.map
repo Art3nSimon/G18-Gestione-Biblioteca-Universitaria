@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,147,94,173"/>
+<area shape="rect" id="Node000001" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html" title=" " alt="" coords="142,5,293,48"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="67,133,99,95,140,58,162,47,158,51,143,62,103,99,72,136"/>
+<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_libro.html" title=" " alt="" coords="142,72,293,115"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="98,138,164,113,160,117,101,143"/>
+<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_libro_1_1_autore.html" title=" " alt="" coords="142,139,293,181"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="109,158,144,159,139,161,110,162"/>
+<area shape="rect" id="Node000004" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html" title=" " alt="" coords="142,205,293,248"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="99,177,164,204,160,206,99,182"/>
+<area shape="rect" id="Node000005" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_utente.html" title=" " alt="" coords="142,272,293,315"/>
+<area shape="poly" id="edge6_Node000000_Node000005" title=" " alt="" coords="70,183,103,221,143,258,163,271,158,271,140,262,99,225,69,188"/>
+</map>

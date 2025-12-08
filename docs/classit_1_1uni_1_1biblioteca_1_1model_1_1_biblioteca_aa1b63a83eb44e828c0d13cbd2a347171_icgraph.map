@@ -1,0 +1,19 @@
+<map id="it.uni.biblioteca.model.Biblioteca.salvaDati" name="it.uni.biblioteca.model.Biblioteca.salvaDati">
+<area shape="rect" id="Node000001" title=" " alt="" coords="252,239,403,281"/>
+<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#ac6ef7b0aaa40f5177e58f877e9755629" title=" " alt="" coords="25,5,184,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,224,294,188,270,144,239,100,202,62,185,50,184,45,205,58,244,96,275,141,299,185,316,225"/>
+<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a29825ff90cfc3b3760b4f319053c02f7" title=" " alt="" coords="20,72,189,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,226,258,177,231,151,202,129,183,118,182,113,205,124,235,147,262,173,305,226"/>
+<area shape="rect" id="Node000004" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a9901049f383794effd91ea23a30ffe53" title=" " alt="" coords="29,139,180,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="274,232,203,196,176,184,174,179,205,191,279,230"/>
+<area shape="rect" id="Node000005" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a3cccf8d06fa3e5372ab05e0f04c45f35" title=" " alt="" coords="23,205,186,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="234,248,187,241,186,236,239,245"/>
+<area shape="rect" id="Node000006" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#af48778be8f9d9899c818a8de84269a8d" title=" " alt="" coords="25,272,184,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="234,275,186,284,184,279,239,272"/>
+<area shape="rect" id="Node000007" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a0df291d99a6ec9654dc2a890569c1e6f" title=" " alt="" coords="19,339,190,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="275,291,205,329,176,340,173,336,203,324,279,288"/>
+<area shape="rect" id="Node000008" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a1e2abce6d907356fd9cfa09f60694ae8" title=" " alt="" coords="19,405,190,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="305,292,262,347,235,373,205,396,184,407,181,403,202,391,231,369,258,343,301,296"/>
+<area shape="rect" id="Node000009" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a2932e5755c693c08733fa3ec99466186" title=" " alt="" coords="5,472,204,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="315,293,299,335,275,379,244,424,205,462,187,474,185,469,202,458,239,420,270,376,294,332,311,297"/>
+</map>

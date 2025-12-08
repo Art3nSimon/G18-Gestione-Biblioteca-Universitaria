@@ -1,0 +1,9 @@
+<map id="src/main/java/it/uni/biblioteca/model/Libro.java" name="src/main/java/it/uni/biblioteca/model/Libro.java">
+<area shape="rect" id="Node000001" title=" " alt="" coords="132,5,311,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,136,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,48,109,91,106,86,180,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="160,96,282,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,47,223,82,219,79,219,51"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="306,96,398,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="256,46,321,88,316,88,254,51"/>
+</map>

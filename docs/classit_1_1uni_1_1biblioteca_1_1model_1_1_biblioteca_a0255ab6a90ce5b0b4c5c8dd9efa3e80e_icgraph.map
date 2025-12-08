@@ -1,0 +1,15 @@
+<map id="it.uni.biblioteca.model.Biblioteca.getInstance" name="it.uni.biblioteca.model.Biblioteca.getInstance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="258,172,409,215"/>
+<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_controller.html#ad10b0c198e203650a60822d8efb3bdb9" title=" " alt="" coords="23,5,192,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="306,159,264,110,237,84,208,62,189,51,188,46,211,58,241,80,268,106,311,159"/>
+<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_dialog_controller.html#a1b6fddfab1997a42dd4da22886ba7a37" title=" " alt="" coords="11,72,204,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="280,165,209,129,181,118,180,113,211,124,285,163"/>
+<area shape="rect" id="Node000004" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_prestito_controller.html#a0a66e27efcf117ee83dd68820d719306" title=" " alt="" coords="21,139,194,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="240,181,195,175,194,170,245,179"/>
+<area shape="rect" id="Node000005" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_utente_controller.html#a24beff36f6fb60618365240bb1d6e783" title=" " alt="" coords="23,205,192,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="240,208,194,217,192,212,245,205"/>
+<area shape="rect" id="Node000006" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_utente_dialog_controller.html#a1b0e745fd3bf87d7cf6ec5ca2b3f870c" title=" " alt="" coords="5,272,210,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="281,224,211,262,182,274,179,269,209,258,285,221"/>
+<area shape="rect" id="Node000007" href="$classit_1_1uni_1_1biblioteca_1_1main_1_1_main_app.html#ad30de9d196d8b5d0204dfad1c18c6e5d" title=" " alt="" coords="21,339,194,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="311,226,268,280,241,306,211,329,189,341,187,336,208,324,237,302,264,277,306,229"/>
+</map>
