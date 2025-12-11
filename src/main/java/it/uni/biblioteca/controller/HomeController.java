@@ -18,7 +18,7 @@ import javafx.scene.layout.VBox;
 
 /**
  * Controller per la schermata Home
- * @author Matteo
+ * @author Simona
  */
 public class HomeController {
     

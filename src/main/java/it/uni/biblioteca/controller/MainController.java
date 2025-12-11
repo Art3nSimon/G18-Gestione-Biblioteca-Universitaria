@@ -36,7 +36,7 @@ public class MainController {
     }
     
     /**
-     * Carica la schermata HOME (nuova!)
+     * Carica la schermata HOME 
      */
     @FXML
     public void apriHome() {

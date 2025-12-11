@@ -14,7 +14,7 @@
 }
 
 /* ============================================
-   SIDEBAR NAVIGATION (Nuovo!)
+   SIDEBAR NAVIGATION 
    ============================================ */
 
 .sidebar {
@@ -85,7 +85,7 @@
 }
 
 /* ============================================
-   HOME DASHBOARD (Nuovo!)
+   HOME DASHBOARD
    ============================================ */
 
 .home-pane {
@@ -123,7 +123,7 @@
 
 /* Card Colori Specifici */
 .card-libri {
-    -fx-border-color: #3498db;
+    -fx-border-color: #b20000;
     -fx-border-width: 0 0 5 0;
     -fx-border-radius: 15px;
 }
