@@ -21,6 +21,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.time.LocalDate;
+import java.util.List;
+import javafx.beans.property.SimpleStringProperty;
 
 /**
  *
@@ -48,14 +50,14 @@ public class PrestitoController {
         
         // Setup colonne tabella
         colonnaUtente.setCellValueFactory(cellData -> 
-            new javafx.beans.property.SimpleStringProperty(
+            new SimpleStringProperty(
                 cellData.getValue().getUtente().getNomeCognome() + 
                 " (" + cellData.getValue().getUtente().getMatricola() + ")"
             )
         );
         
         colonnaLibro.setCellValueFactory(cellData -> 
-            new javafx.beans.property.SimpleStringProperty(
+            new SimpleStringProperty(
                 cellData.getValue().getLibro().getTitolo()
             )
         );
@@ -69,7 +71,7 @@ public class PrestitoController {
         );
         
         colonnaStato.setCellValueFactory(cellData -> 
-            new javafx.beans.property.SimpleStringProperty(
+            new SimpleStringProperty(
                 cellData.getValue().getStatoDescrizione()
             )
         );
@@ -145,11 +147,11 @@ public class PrestitoController {
                 Utente u = comboUtente.getValue();
                 if (u != null) {
                     if (u.haRaggiuntoLimite()) {
-                        infoUtente.setText("⚠️ Limite prestiti raggiunto (" + 
+                        infoUtente.setText("Limite prestiti raggiunto (" + 
                             u.getNumeroPrestitiAttivi() + "/3)");
                         infoUtente.setStyle("-fx-text-fill: red;");
                     } else {
-                        infoUtente.setText("✓ Prestiti: " + 
+                        infoUtente.setText("Prestiti: " + 
                             u.getNumeroPrestitiAttivi() + "/3");
                         infoUtente.setStyle("-fx-text-fill: green;");
                     }
@@ -160,12 +162,12 @@ public class PrestitoController {
                 Libro l = comboLibro.getValue();
                 if (l != null) {
                     if (l.isDisponibile()) {
-                        infoLibro.setText("✓ Copie disponibili: " + 
+                        infoLibro.setText("Copie disponibili: " + 
                             l.getNumeroCopieDisponibili() + "/" + 
                             l.getNumeroCopieTotali());
                         infoLibro.setStyle("-fx-text-fill: green;");
                     } else {
-                        infoLibro.setText("⚠️ Nessuna copia disponibile");
+                        infoLibro.setText("Nessuna copia disponibile");
                         infoLibro.setStyle("-fx-text-fill: red;");
                     }
                 }
@@ -274,11 +276,15 @@ public class PrestitoController {
      */
     @FXML
     private void aggiornaTabella() {
-        listaPrestiti = FXCollections.observableArrayList(
-            biblioteca.getPrestitiAttivi()
-        );
-        tabellaPrestiti.setItems(listaPrestiti);
+        List<Prestito> prestiti = biblioteca.getPrestitiAttivi();
         
+        //Ordina per data restituzione prevista
+        prestiti.sort((p1, p2) ->
+                p1.getDataRestituzionePrevista().compareTo(p2.getDataRestituzionePrevista())
+        );
+        
+        listaPrestiti = FXCollections.observableArrayList(prestiti);
+        tabellaPrestiti.setItems(listaPrestiti);
         // Aggiorna statistiche
         aggiornaStatistiche();
     }
@@ -295,9 +301,9 @@ public class PrestitoController {
             .filter(p -> !p.isInRitardo() && p.getGiorniAllaScadenza() <= 2)
             .count();
         
-        labelTotale.setText("📊 Totale Prestiti Attivi: " + totale);
-        labelRitardi.setText("⚠️ Prestiti in Ritardo: " + ritardi);
-        labelScadenza.setText("⏰ In Scadenza (entro 2gg): " + inScadenza);
+        labelTotale.setText("Totale Prestiti Attivi: " + totale);
+        labelRitardi.setText("Prestiti in Ritardo: " + ritardi);
+        labelScadenza.setText("In Scadenza (entro 2gg): " + inScadenza);
         
         // Colora label ritardi se > 0
         if (ritardi > 0) {
