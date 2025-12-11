@@ -17,7 +17,7 @@ import javafx.scene.layout.BorderPane;
 
 /**
  * MainController con Home Dashboard
- * @author Matteo
+ * @author Simona
  */
 public class MainController {
     
