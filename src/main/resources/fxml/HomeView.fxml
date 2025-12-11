@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="it.uni.biblioteca.controller.HomeController"
+            styleClass="home-pane">
+    
+    <top>
+        <!-- Header -->
+        <VBox styleClass="home-header">
+            <padding>
+                <Insets top="40.0" right="40.0" bottom="30.0" left="40.0"/>
+            </padding>
+            
+            <Label text="📚 Sistema Gestione Biblioteca Universitaria" styleClass="home-title">
+                <font>
+                    <Font name="System Bold" size="32.0"/>
+                </font>
+            </Label>
+            
+            <Label text="Benvenuto! Seleziona un'area per iniziare" styleClass="home-subtitle">
+                <font>
+                    <Font size="16.0"/>
+                </font>
+            </Label>
+        </VBox>
+    </top>
+    
+    <center>
+        <!-- Cards Container -->
+        <VBox spacing="40.0" alignment="CENTER">
+            <padding>
+                <Insets top="20.0" right="40.0" bottom="40.0" left="40.0"/>
+            </padding>
+            
+            <!-- Row 1: Cards Principali -->
+            <HBox spacing="30.0" alignment="CENTER">
+                
+                <!-- CARD LIBRI -->
+                <VBox fx:id="cardLibri" styleClass="dashboard-card, card-libri" 
+                      spacing="15.0" alignment="CENTER"
+                      onMouseClicked="#apriGestioneLibri">
+                    <padding>
+                        <Insets top="30.0" right="40.0" bottom="30.0" left="40.0"/>
+                    </padding>
+                    
+                    <Label text="📖" styleClass="card-icon">
+                        <font>
+                            <Font size="48.0"/>
+                        </font>
+                    </Label>
+                    
+                    <Label text="GESTIONE LIBRI" styleClass="card-title">
+                        <font>
+                            <Font name="System Bold" size="20.0"/>
+                        </font>
+                    </Label>
+                    
+                    <Separator prefWidth="150.0"/>
+                    
+                    <VBox spacing="8.0" alignment="CENTER">
+                        <Label fx:id="labelTotaleLibri" text="0" styleClass="card-number">
+                            <font>
+                                <Font name="System Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Libri Totali" styleClass="card-label"/>
+                        <Label fx:id="labelLibriDisponibili" text="0 disponibili" 
+                               styleClass="card-sublabel"/>
+                    </VBox>
+                    
+                    <Region VBox.vgrow="ALWAYS"/>
+                    
+                    <Label text="Clicca per gestire →" styleClass="card-action"/>
+                </VBox>
+                
+                <!-- CARD UTENTI -->
+                <VBox fx:id="cardUtenti" styleClass="dashboard-card, card-utenti" 
+                      spacing="15.0" alignment="CENTER"
+                      onMouseClicked="#apriGestioneUtenti">
+                    <padding>
+                        <Insets top="30.0" right="40.0" bottom="30.0" left="40.0"/>
+                    </padding>
+                    
+                    <Label text="👥" styleClass="card-icon">
+                        <font>
+                            <Font size="48.0"/>
+                        </font>
+                    </Label>
+                    
+                    <Label text="GESTIONE UTENTI" styleClass="card-title">
+                        <font>
+                            <Font name="System Bold" size="20.0"/>
+                        </font>
+                    </Label>
+                    
+                    <Separator prefWidth="150.0"/>
+                    
+                    <VBox spacing="8.0" alignment="CENTER">
+                        <Label fx:id="labelTotaleUtenti" text="0" styleClass="card-number">
+                            <font>
+                                <Font name="System Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Utenti Registrati" styleClass="card-label"/>
+                        <Label fx:id="labelUtentiAttivi" text="0 con prestiti" 
+                               styleClass="card-sublabel"/>
+                    </VBox>
+                    
+                    <Region VBox.vgrow="ALWAYS"/>
+                    
+                    <Label text="Clicca per gestire →" styleClass="card-action"/>
+                </VBox>
+                
+                <!-- CARD PRESTITI -->
+                <VBox fx:id="cardPrestiti" styleClass="dashboard-card, card-prestiti" 
+                      spacing="15.0" alignment="CENTER"
+                      onMouseClicked="#apriGestionePrestiti">
+                    <padding>
+                        <Insets top="30.0" right="40.0" bottom="30.0" left="40.0"/>
+                    </padding>
+                    
+                    <Label text="📋" styleClass="card-icon">
+                        <font>
+                            <Font size="48.0"/>
+                        </font>
+                    </Label>
+                    
+                    <Label text="GESTIONE PRESTITI" styleClass="card-title">
+                        <font>
+                            <Font name="System Bold" size="20.0"/>
+                        </font>
+                    </Label>
+                    
+                    <Separator prefWidth="150.0"/>
+                    
+                    <VBox spacing="8.0" alignment="CENTER">
+                        <Label fx:id="labelPrestitiAttivi" text="0" styleClass="card-number">
+                            <font>
+                                <Font name="System Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                        <Label text="Prestiti Attivi" styleClass="card-label"/>
+                        <Label fx:id="labelPrestitiRitardo" text="0 in ritardo" 
+                               styleClass="card-sublabel-warning"/>
+                    </VBox>
+                    
+                    <Region VBox.vgrow="ALWAYS"/>
+                    
+                    <Label text="Clicca per gestire →" styleClass="card-action"/>
+                </VBox>
+                
+            </HBox>
+            
+            <!-- Info Footer -->
+            <HBox spacing="20.0" alignment="CENTER" styleClass="home-footer">
+                <padding>
+                    <Insets top="20.0"/>
+                </padding>
+                
+                <Label text="💡 Suggerimento:" styleClass="footer-tip-icon">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Label>
+                <Label text="Clicca su una delle card sopra per accedere alla sezione corrispondente" 
+                       styleClass="footer-tip-text"/>
+            </HBox>
+            
+        </VBox>
+    </center>
+    
+</BorderPane>

@@ -1,5 +1,6 @@
 /* ============================================
    SISTEMA GESTIONE BIBLIOTECA UNIVERSITARIA
+   Stylesheet Principale + Home Dashboard
    ============================================ */
 
 /* ============================================
@@ -13,33 +14,182 @@
 }
 
 /* ============================================
-   MENU BAR (MainView)
+   SIDEBAR NAVIGATION (Nuovo!)
    ============================================ */
 
-.menu-bar {
+.sidebar {
     -fx-background-color: #2c3e50;
+}
+
+.sidebar-header {
+    -fx-background-color: rgba(52, 73, 94, 0.5);
+    -fx-padding: 10px;
+    -fx-background-radius: 8px;
+}
+
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 12px;
+}
+
+.sidebar-section-label {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
     -fx-padding: 5px;
 }
 
-.menu-bar .label {
+/* Bottoni Navigazione Sidebar */
+.nav-button {
+    -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 14px;
+    -fx-padding: 12px 15px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
 }
 
-.menu-bar .menu-item {
-    -fx-background-color: white;
+.nav-button:hover {
+    -fx-background-color: #34495e;
 }
 
-.menu-bar .menu-item:hover {
+.nav-button-active {
     -fx-background-color: #3498db;
+    -fx-font-weight: bold;
 }
 
-.menu-bar .menu-item .label {
+.nav-button-active:hover {
+    -fx-background-color: #2980b9;
+}
+
+.nav-button-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 13px;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.nav-button-secondary:hover {
+    -fx-background-color: rgba(149, 165, 166, 0.2);
+    -fx-text-fill: white;
+}
+
+/* ============================================
+   HOME DASHBOARD (Nuovo!)
+   ============================================ */
+
+.home-pane {
+    -fx-background-color: linear-gradient(to bottom, #ecf0f1 0%, #bdc3c7 100%);
+}
+
+.home-header {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 3);
+}
+
+.home-title {
     -fx-text-fill: #2c3e50;
 }
 
-.menu-bar .menu-item:hover .label {
-    -fx-text-fill: white;
+.home-subtitle {
+    -fx-text-fill: #7f8c8d;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 5);
+    -fx-cursor: hand;
+    -fx-min-width: 280px;
+    -fx-min-height: 380px;
+    -fx-max-width: 320px;
+}
+
+.dashboard-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 20, 0, 0, 8);
+    -fx-translate-y: -5px;
+}
+
+/* Card Colori Specifici */
+.card-libri {
+    -fx-border-color: #3498db;
+    -fx-border-width: 0 0 5 0;
+    -fx-border-radius: 15px;
+}
+
+.card-utenti {
+    -fx-border-color: #27ae60;
+    -fx-border-width: 0 0 5 0;
+    -fx-border-radius: 15px;
+}
+
+.card-prestiti {
+    -fx-border-color: #f39c12;
+    -fx-border-width: 0 0 5 0;
+    -fx-border-radius: 15px;
+}
+
+/* Card Content */
+.card-icon {
+    -fx-text-fill: #34495e;
+}
+
+.card-title {
+    -fx-text-fill: #2c3e50;
+}
+
+.card-number {
+    -fx-text-fill: #2c3e50;
+}
+
+.card-label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+.card-sublabel {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.card-sublabel-warning {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.card-action {
+    -fx-text-fill: #3498db;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+/* Home Footer */
+.home-footer {
+    -fx-background-color: rgba(255, 255, 255, 0.7);
+    -fx-background-radius: 10px;
+    -fx-padding: 15px;
+}
+
+.footer-tip-icon {
+    -fx-text-fill: #f39c12;
+}
+
+.footer-tip-text {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 13px;
 }
 
 /* ============================================
@@ -55,7 +205,6 @@
     -fx-text-fill: white;
     -fx-font-size: 12px;
 }
-
 
 /* ============================================
    CONTENT PANE

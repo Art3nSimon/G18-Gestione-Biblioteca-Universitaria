@@ -11,24 +11,74 @@
             prefHeight="800.0" prefWidth="1200.0"
             styleClass="root">
     
-    <!-- TOP: Menu Bar -->
-    <top>
-        <MenuBar styleClass="menu-bar">
-            <Menu text="File">
-                <MenuItem text="Esci" onAction="#esci"/>
-            </Menu>
+    <!-- LEFT: Sidebar Navigation (invece del menu bar) -->
+    <left>
+        <VBox styleClass="sidebar" spacing="5.0" prefWidth="200.0">
+            <padding>
+                <Insets top="20.0" right="10.0" bottom="20.0" left="10.0"/>
+            </padding>
             
-            <Menu text="Gestione">
-                <MenuItem text="Gestione Libri" onAction="#apriGestioneLibri"/>
-                <MenuItem text="Gestione Utenti" onAction="#apriGestioneUtenti"/>
-                <MenuItem text="Gestione Prestiti" onAction="#apriGestionePrestiti"/>
-            </Menu>
+            <!-- Logo/Titolo -->
+            <VBox spacing="5.0" alignment="CENTER" styleClass="sidebar-header">
+                <padding>
+                    <Insets bottom="20.0"/>
+                </padding>
+                <Label text="📚" style="-fx-font-size: 36px;"/>
+                <Label text="Biblioteca" styleClass="sidebar-title"/>
+                <Label text="Universitaria" styleClass="sidebar-subtitle"/>
+            </VBox>
             
-            <Menu text="Aiuto">
-                <MenuItem text="Informazioni" onAction="#mostraInformazioni"/>
-            </Menu>
-        </MenuBar>
-    </top>
+            <Separator/>
+            
+            <!-- Navigation Buttons -->
+            <Label text="NAVIGAZIONE" styleClass="sidebar-section-label">
+                <padding>
+                    <Insets top="15.0" bottom="5.0" left="5.0"/>
+                </padding>
+            </Label>
+            
+            <Button fx:id="btnHome" text="🏠 Home" 
+                    onAction="#apriHome"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+            
+            <Button fx:id="btnLibri" text="📖 Gestione Libri" 
+                    onAction="#apriGestioneLibri"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+            
+            <Button fx:id="btnUtenti" text="👥 Gestione Utenti" 
+                    onAction="#apriGestioneUtenti"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+            
+            <Button fx:id="btnPrestiti" text="📋 Gestione Prestiti" 
+                    onAction="#apriGestionePrestiti"
+                    styleClass="nav-button"
+                    maxWidth="Infinity"/>
+            
+            <Region VBox.vgrow="ALWAYS"/>
+            
+            <Separator/>
+            
+            <!-- Bottom Actions -->
+            <Label text="ALTRO" styleClass="sidebar-section-label">
+                <padding>
+                    <Insets top="10.0" bottom="5.0" left="5.0"/>
+                </padding>
+            </Label>
+            
+            <Button text="ℹ️ Info" 
+                    onAction="#mostraInformazioni"
+                    styleClass="nav-button-secondary"
+                    maxWidth="Infinity"/>
+            
+            <Button text="🚪 Esci" 
+                    onAction="#esci"
+                    styleClass="nav-button-secondary"
+                    maxWidth="Infinity"/>
+        </VBox>
+    </left>
     
     <!-- CENTER: Area centrale per caricare le view -->
     <!-- Il contenuto viene caricato dinamicamente dal MainController -->
@@ -40,6 +90,8 @@
                 <Insets top="8.0" right="15.0" bottom="8.0" left="15.0"/>
             </padding>
             <Label text="Sistema Gestione Biblioteca Universitaria - Pronto" styleClass="status-label"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="v1.0" styleClass="status-label"/>
         </HBox>
     </bottom>
     
