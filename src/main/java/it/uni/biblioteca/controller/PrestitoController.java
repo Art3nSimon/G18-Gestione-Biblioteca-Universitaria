@@ -67,7 +67,7 @@ public class PrestitoController {
         );
         
         colonnaDataScadenza.setCellValueFactory(
-            new PropertyValueFactory<>("dataRestituzioneRevista")
+            new PropertyValueFactory<>("dataRestituzionePrevista")
         );
         
         colonnaStato.setCellValueFactory(cellData -> 
