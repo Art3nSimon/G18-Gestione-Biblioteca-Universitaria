@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
@@ -15,7 +14,7 @@
    <children>
        
        <!-- Titolo Dialog -->
-       <Label styleClass="dialog-title" text="➕INSERISCI/MODIFICA LIBRO" />
+       <Label styleClass="dialog-title" text="➕ INSERISCI/MODIFICA LIBRO" />
        
        <Separator />
        
@@ -35,7 +34,7 @@
               
               <!-- Riga 1: ISBN -->
               <Label text="ISBN: *" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-              <TextField fx:id="fieldIsbn" promptText="es. 978-88-04-12345-6" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+              <TextField fx:id="fieldIsbn" promptText="es. 9788804123456" GridPane.columnIndex="1" GridPane.rowIndex="1" />
               
               <!-- Riga 2: Anno -->
               <Label text="Anno Pubbl.: *" GridPane.columnIndex="0" GridPane.rowIndex="2" />
