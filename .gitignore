@@ -9,3 +9,4 @@ nbdist/
 *.jar
 *.war
 *.ear
+/nbproject/
