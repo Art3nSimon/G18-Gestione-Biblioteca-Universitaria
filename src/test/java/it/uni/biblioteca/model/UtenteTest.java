@@ -87,15 +87,14 @@ public class UtenteTest {
     }
     
     @Test
-    public void testAggiungiDuePrestiti() {
+    public void testAggiungiDuePrestiti() throws InterruptedException {
         Libro libro1 = new Libro("ISBN1", "Libro 1", 2020, 3);
         Libro libro2 = new Libro("ISBN2", "Libro 2", 2020, 3);
         Prestito p1 = new Prestito(utente, libro1, LocalDate.now().plusDays(7));
+        Thread.sleep(2);
         Prestito p2 = new Prestito(utente, libro2, LocalDate.now().plusDays(7));
-        
         utente.aggiungiPrestito(p1);
         utente.aggiungiPrestito(p2);
-        
         assertEquals(2, utente.getNumeroPrestitiAttivi());
     }
     
@@ -126,19 +125,18 @@ public class UtenteTest {
     }
     
     @Test
-    public void testHaRaggiuntoLimiteConTrePrestiti() {
+    public void testHaRaggiuntoLimiteConTrePrestiti() throws InterruptedException {
         Libro libro1 = new Libro("ISBN1", "Libro 1", 2020, 3);
         Libro libro2 = new Libro("ISBN2", "Libro 2", 2020, 3);
         Libro libro3 = new Libro("ISBN3", "Libro 3", 2020, 3);
-        
         Prestito p1 = new Prestito(utente, libro1, LocalDate.now().plusDays(7));
+        Thread.sleep(2);
         Prestito p2 = new Prestito(utente, libro2, LocalDate.now().plusDays(7));
+        Thread.sleep(2);
         Prestito p3 = new Prestito(utente, libro3, LocalDate.now().plusDays(7));
-        
         utente.aggiungiPrestito(p1);
         utente.aggiungiPrestito(p2);
         utente.aggiungiPrestito(p3);
-        
         assertTrue(utente.haRaggiuntoLimite());
     }
     
@@ -170,5 +168,21 @@ public class UtenteTest {
     public void testHashCodeUguali() {
         Utente utente2 = new Utente("12345", "Luigi", "Verdi", "luigi@unisa.it");
         assertEquals(utente.hashCode(), utente2.hashCode());
+    }
+    
+    // Test per verificare che non vengano aggiunti prestiti duplicati
+    @Test
+    public void testAggiungiPrestitoDuplicato() {
+        Libro libro = new Libro("ISBN1", "Libro 1", 2020, 3);
+        Prestito prestito = new Prestito(utente, libro, LocalDate.now().plusDays(7));
+        utente.aggiungiPrestito(prestito);
+        utente.aggiungiPrestito(prestito);
+        assertEquals(1, utente.getNumeroPrestitiAttivi());
+    }
+
+    // Test equals con classe diversa
+    @Test
+    public void testEqualsClasseDiversa() {
+        assertFalse(utente.equals("stringa"));
     }
 }

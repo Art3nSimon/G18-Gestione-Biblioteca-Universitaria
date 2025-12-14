@@ -151,4 +151,11 @@ public class LibroTest {
         Autore autore = new Autore("Mario", "Rossi");
         assertEquals("Rossi Mario", autore.toString());
     }
+    // Test per l'autore con getters
+    @Test
+    public void testAutoreGetters() {
+        Autore autore = new Autore("Mario", "Rossi");
+        assertEquals("Mario", autore.getNome());
+        assertEquals("Rossi", autore.getCognome());
+    }
 }

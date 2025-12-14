@@ -188,9 +188,11 @@ public class PrestitoTest {
     
     //Test HashCode Utente
     @Test
-    public void testHashCodeDiversi() {
+    public void testHashCodeDiversi() throws InterruptedException {
+        Prestito p1 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
+        Thread.sleep(2);
         Prestito p2 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
-        assertNotEquals(prestito.hashCode(), p2.hashCode());
+        assertNotEquals(p1.hashCode(), p2.hashCode());
     }
     
     //Test ToString Prestito
@@ -199,5 +201,22 @@ public class PrestitoTest {
         String str = prestito.toString();
         assertTrue(str.contains("Rossi Mario"));
         assertTrue(str.contains("Il Signore degli Anelli"));
+    }
+    
+    // Test per verificare che non vengano aggiunti prestiti duplicati
+    @Test
+    public void testAggiungiPrestitoDuplicato() {
+        Libro libro = new Libro("ISBN1", "Libro 1", 2020, 3);
+        Prestito prestito = new Prestito(utente, libro, LocalDate.now().plusDays(7));
+
+        utente.aggiungiPrestito(prestito);
+        utente.aggiungiPrestito(prestito); 
+        assertEquals(1, utente.getNumeroPrestitiAttivi());
+    }
+
+    // Test equals con classe diversa
+    @Test
+    public void testEqualsClasseDiversa() {
+        assertFalse(utente.equals("stringa"));
     }
 }
