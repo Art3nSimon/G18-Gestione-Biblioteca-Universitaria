@@ -1,7 +1,0 @@
-<map id="it.uni.biblioteca.model.Libro.isDisponibile" name="it.uni.biblioteca.model.Libro.isDisponibile">
-<area shape="rect" id="Node000001" title=" " alt="" coords="224,39,375,81"/>
-<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_controller.html#ad10b0c198e203650a60822d8efb3bdb9" title=" " alt="" coords="6,5,175,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,46,176,43,175,38,211,45"/>
-<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a1e2abce6d907356fd9cfa09f60694ae8" title=" " alt="" coords="5,72,176,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,75,177,82,176,77,211,74"/>
-</map>

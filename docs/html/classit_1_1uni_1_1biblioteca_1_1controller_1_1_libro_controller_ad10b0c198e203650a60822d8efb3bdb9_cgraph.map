@@ -1,7 +1,0 @@
-<map id="it.uni.biblioteca.controller.LibroController.initialize" name="it.uni.biblioteca.controller.LibroController.initialize">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,175,81"/>
-<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_biblioteca.html#a0255ab6a90ce5b0b4c5c8dd9efa3e80e" title=" " alt="" coords="223,5,374,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,44,210,40,205,42,176,49"/>
-<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_libro.html#a0f74a12c2e9a7dbb617e0eb6a2e28b3d" title=" " alt="" coords="223,72,374,115"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="175,71,210,79,204,79,175,76"/>
-</map>

@@ -1,5 +1,6 @@
 var namespaceit_1_1uni_1_1biblioteca_1_1controller =
 [
+    [ "HomeController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_home_controller.html", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_home_controller" ],
     [ "LibroController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_controller.html", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_controller" ],
     [ "LibroDialogController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_dialog_controller.html", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_dialog_controller" ],
     [ "MainController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_main_controller.html", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_main_controller" ],

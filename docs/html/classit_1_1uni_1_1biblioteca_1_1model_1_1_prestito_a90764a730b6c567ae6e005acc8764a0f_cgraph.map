@@ -1,7 +1,0 @@
-<map id="it.uni.biblioteca.model.Prestito.getGiorniRitardo" name="it.uni.biblioteca.model.Prestito.getGiorniRitardo">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,170,48"/>
-<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#a77f2ce60cd3f63c98c79dd3581277a1c" title=" " alt="" coords="218,5,369,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,24,205,26,199,27,170,29"/>
-<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#aa90763fc51dd31d188a76427e9d074bb" title=" " alt="" coords="417,5,568,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,24,404,27,399,27,370,29"/>
-</map>

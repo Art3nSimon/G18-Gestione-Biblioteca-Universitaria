@@ -4,6 +4,7 @@ var hierarchy =
     [ "Application", null, [
       [ "it.uni.biblioteca.main.MainApp", "classit_1_1uni_1_1biblioteca_1_1main_1_1_main_app.html", null ]
     ] ],
+    [ "it.uni.biblioteca.controller.HomeController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_home_controller.html", null ],
     [ "it.uni.biblioteca.controller.LibroController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_controller.html", null ],
     [ "it.uni.biblioteca.controller.LibroDialogController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_libro_dialog_controller.html", null ],
     [ "it.uni.biblioteca.controller.MainController", "classit_1_1uni_1_1biblioteca_1_1controller_1_1_main_controller.html", null ],
