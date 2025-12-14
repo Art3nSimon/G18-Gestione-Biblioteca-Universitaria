@@ -25,8 +25,7 @@ import java.util.List;
 /**
  * Controller per la gestione dei libri.
  * Requisiti: UC-1 a UC-5, IF-1.1 a IF-1.5
- * 
- * @author Simona
+ * * @author Simona
  */
 public class LibroController {
     
@@ -57,6 +56,7 @@ public class LibroController {
     private Biblioteca biblioteca;
     private ObservableList<Libro> listaLibri;
     
+    /** Inizializza il controller e le colonne della tabella */
     @FXML
     public void initialize() {
         biblioteca = Biblioteca.getInstance();

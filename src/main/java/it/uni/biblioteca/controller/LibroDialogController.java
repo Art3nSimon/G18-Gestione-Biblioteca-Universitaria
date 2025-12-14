@@ -34,6 +34,7 @@ public class LibroDialogController {
     private boolean confermato = false;
     private ObservableList<Libro.Autore> autori;
     
+    /** Inizializza il controller */
     @FXML
     public void initialize() {
         biblioteca = Biblioteca.getInstance();

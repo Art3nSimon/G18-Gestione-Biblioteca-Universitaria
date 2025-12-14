@@ -21,20 +21,20 @@ import java.util.stream.Collectors;
 public class Biblioteca implements Serializable {
     private static final String FILE_DATI = "biblioteca_data.ser";
     
-    //Attributi Biblioteca
+    /** Attributi Biblioteca */
     private List<Libro> libri;
     private List<Utente> utenti;
     private List<Prestito> prestiti;
     private static Biblioteca instance;
     
-    //Costrutto Biblioteca
+    /** Costrutto Biblioteca */
     private Biblioteca() {
         this.libri = new ArrayList<>();
         this.utenti = new ArrayList<>();
         this.prestiti = new ArrayList<>();
     }
     
-    //Metodo get Biblioteca
+    /** Metodo get Biblioteca (Singleton) */
     public static Biblioteca getInstance() {
         if (instance == null) {
             instance = new Biblioteca();
@@ -42,7 +42,9 @@ public class Biblioteca implements Serializable {
         return instance;
     }
     
-    //Gestione Libri
+    /** Gestione Libri */
+    
+    /** Aggiunge un libro con controlli */
     public void aggiungiLibro(Libro libro) throws Exception {
         if (libro.getTitolo() == null || libro.getTitolo().trim().isEmpty()) {
             throw new Exception("Titolo obbligatorio");
@@ -57,6 +59,7 @@ public class Biblioteca implements Serializable {
         salvaDati();
     }
     
+    /** Modifica un libro esistente */
     public void modificaLibro(Libro libro) throws Exception {
         for (int i = 0; i < libri.size(); i++) {
             if (libri.get(i).getIsbn().equals(libro.getIsbn())) {
@@ -68,6 +71,7 @@ public class Biblioteca implements Serializable {
         throw new Exception("Libro non trovato");
     }
     
+    /** Elimina un libro per ISBN */
     public void eliminaLibro(String isbn) throws Exception {
         for (Prestito p : prestiti) {
             if (p.isAttivo() && p.getLibro().getIsbn().equals(isbn)) {
@@ -78,12 +82,14 @@ public class Biblioteca implements Serializable {
         salvaDati();
     }
     
+    /** Restituisce tutti i libri ordinati */
     public List<Libro> getTuttiLibri() {
         List<Libro> ordinati = new ArrayList<>(libri);
         ordinati.sort((l1, l2) -> l1.getTitolo().compareToIgnoreCase(l2.getTitolo()));
         return ordinati;
     }
     
+    /** Cerca libri per criterio */
     public List<Libro> cercaLibri(String criterio, String tipo) {
         String critLower = criterio.toLowerCase();
         return libri.stream()
@@ -100,6 +106,7 @@ public class Biblioteca implements Serializable {
             .collect(Collectors.toList());
     }
     
+    /** Cerca singolo libro per ISBN */
     public Libro cercaLibroPerIsbn(String isbn) {
         for (Libro l : libri) {
             if (l.getIsbn().equals(isbn)) return l;
@@ -107,7 +114,9 @@ public class Biblioteca implements Serializable {
         return null;
     }
     
-    //Gestione Utenti
+    /** Gestione Utenti */
+    
+    /** Aggiunge nuovo utente */
     public void aggiungiUtente(Utente utente) throws Exception {
         if (utente.getNome() == null || utente.getNome().trim().isEmpty()) {
             throw new Exception("Nome obbligatorio");
@@ -122,6 +131,7 @@ public class Biblioteca implements Serializable {
         salvaDati();
     }
     
+    /** Modifica utente esistente */
     public void modificaUtente(Utente utente) throws Exception {
         for (int i = 0; i < utenti.size(); i++) {
             if (utenti.get(i).getMatricola().equals(utente.getMatricola())) {
@@ -133,6 +143,7 @@ public class Biblioteca implements Serializable {
         throw new Exception("Utente non trovato");
     }
     
+    /** Elimina utente per matricola */
     public void eliminaUtente(String matricola) throws Exception {
         // Verifica nessun prestito attivo
         for (Prestito p : prestiti) {
@@ -145,6 +156,7 @@ public class Biblioteca implements Serializable {
         salvaDati();
     }
     
+    /** Restituisce tutti gli utenti ordinati */
     public List<Utente> getTuttiUtenti() {
         List<Utente> ordinati = new ArrayList<>(utenti);
         ordinati.sort((u1, u2) -> {
@@ -157,6 +169,7 @@ public class Biblioteca implements Serializable {
         return ordinati;
     }
     
+    /** Cerca utenti per criterio */
     public List<Utente> cercaUtenti(String criterio, String tipo) {
         String critLower = criterio.toLowerCase();
         return utenti.stream()
@@ -171,6 +184,7 @@ public class Biblioteca implements Serializable {
             .collect(Collectors.toList());
     }
     
+    /** Cerca singolo utente per matricola */
     public Utente cercaUtentePerMatricola(String matricola) {
         for (Utente u : utenti) {
             if (u.getMatricola().equals(matricola)) return u;
@@ -178,7 +192,9 @@ public class Biblioteca implements Serializable {
         return null;
     }
     
-    //Gestione Prestiti
+    /** Gestione Prestiti */
+    
+    /** Registra nuovo prestito */
     public void registraPrestito(String matricola, String isbn, LocalDate dataRestituzione) throws Exception {
         Utente utente = cercaUtentePerMatricola(matricola);
         if (utente == null) {
@@ -204,6 +220,7 @@ public class Biblioteca implements Serializable {
         salvaDati();
     }
     
+    /** Registra restituzione prestito */
     public void registraRestituzione(Prestito prestito) throws Exception {
         if (!prestito.isAttivo()) {
             throw new Exception("Prestito già chiuso");
@@ -214,6 +231,7 @@ public class Biblioteca implements Serializable {
         salvaDati();
     }
     
+    /** Restituisce i prestiti attivi ordinati */
     public List<Prestito> getPrestitiAttivi() {
         List<Prestito> attivi = prestiti.stream()
             .filter(Prestito::isAttivo)
@@ -224,7 +242,9 @@ public class Biblioteca implements Serializable {
         return attivi;
     }
     
-    //Gestione Dati
+    /** Gestione Dati */
+    
+    /** Salva i dati su file */
     public void salvaDati() {
         try (ObjectOutputStream oos = new ObjectOutputStream(
                 new FileOutputStream(FILE_DATI))) {
@@ -234,6 +254,7 @@ public class Biblioteca implements Serializable {
         }
     }
     
+    /** Carica i dati da file */
     public void caricaDati() {
         try (ObjectInputStream ois = new ObjectInputStream(
                 new FileInputStream(FILE_DATI))) {

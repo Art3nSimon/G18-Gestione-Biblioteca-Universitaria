@@ -21,12 +21,13 @@ public class UtenteTest {
     
     private Utente utente;
     
+    /** Inizializzazione dati */
     @BeforeEach
     public void setUp() {
         utente = new Utente("12345", "Mario", "Rossi", "mario@unisa.it");
     }
     
-    //Test Costruttore Utente
+    /** Test Costruttore Utente */
     @Test
     public void testCostruttore() {
         assertEquals("12345", utente.getMatricola());
@@ -35,7 +36,7 @@ public class UtenteTest {
         assertEquals("mario@unisa.it", utente.getEmail());
     }
     
-    //Test Get Utente
+    /** Test Get Utente */
     @Test
     public void testGetNomeCognome() {
         assertEquals("Rossi Mario", utente.getNomeCognome());
@@ -51,7 +52,7 @@ public class UtenteTest {
         assertEquals(0, utente.getNumeroPrestitiAttivi());
     }
     
-    //Test Set Utente
+    /** Test Set Utente */
     @Test
     public void testSetNome() {
         utente.setNome("Luigi");
@@ -70,7 +71,7 @@ public class UtenteTest {
         assertEquals("nuovo@unisa.it", utente.getEmail());
     }
     
-    //Test Prestiti
+    /** Test Prestiti */
     @Test
     public void testGetPrestitiAttiviVuoto() {
         assertTrue(utente.getPrestitiAttivi().isEmpty());
@@ -109,7 +110,7 @@ public class UtenteTest {
         assertEquals(0, utente.getNumeroPrestitiAttivi());
     }
     
-    //Test Limite Prestiti
+    /** Test Limite Prestiti */
     @Test
     public void testHaRaggiuntoLimiteFalse() {
         assertFalse(utente.haRaggiuntoLimite());
@@ -140,7 +141,7 @@ public class UtenteTest {
         assertTrue(utente.haRaggiuntoLimite());
     }
     
-    //Test Equals Utente
+    /** Test Equals Utente */
     @Test
     public void testEqualsStessoOggetto() {
         assertTrue(utente.equals(utente));
@@ -163,14 +164,14 @@ public class UtenteTest {
         assertFalse(utente.equals(utente2));
     }
     
-    //Test HashCode Utente
+    /** Test HashCode Utente */
     @Test
     public void testHashCodeUguali() {
         Utente utente2 = new Utente("12345", "Luigi", "Verdi", "luigi@unisa.it");
         assertEquals(utente.hashCode(), utente2.hashCode());
     }
     
-    // Test per verificare che non vengano aggiunti prestiti duplicati
+    /** Test per verificare che non vengano aggiunti prestiti duplicati */
     @Test
     public void testAggiungiPrestitoDuplicato() {
         Libro libro = new Libro("ISBN1", "Libro 1", 2020, 3);
@@ -180,7 +181,7 @@ public class UtenteTest {
         assertEquals(1, utente.getNumeroPrestitiAttivi());
     }
 
-    // Test equals con classe diversa
+    /** Test equals con classe diversa */
     @Test
     public void testEqualsClasseDiversa() {
         assertFalse(utente.equals("stringa"));

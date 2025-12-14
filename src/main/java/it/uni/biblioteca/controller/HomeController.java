@@ -36,6 +36,7 @@ public class HomeController {
     private Biblioteca biblioteca;
     private MainController mainController;
     
+    /** Inizializza il controller */
     @FXML
     public void initialize() {
         biblioteca = Biblioteca.getInstance();
@@ -91,6 +92,7 @@ public class HomeController {
         setupCardEffect(cardPrestiti);
     }
     
+    /** Setup effetto zoom sulla card singola */
     private void setupCardEffect(VBox card) {
         card.setOnMouseEntered(e -> 
             card.setStyle(card.getStyle() + "-fx-scale-x: 1.02; -fx-scale-y: 1.02;")

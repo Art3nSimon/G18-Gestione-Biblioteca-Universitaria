@@ -15,6 +15,7 @@ import java.util.Optional;
  */
 public class AlertHelper {
     
+    /** Mostra un alert di errore */
     public static void mostraErrore(String titolo, String messaggio) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(titolo);
@@ -23,6 +24,7 @@ public class AlertHelper {
         alert.showAndWait();
     }
     
+    /** Mostra un alert di conferma operazione */
     public static void mostraConferma(String titolo, String messaggio) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titolo);
@@ -31,7 +33,7 @@ public class AlertHelper {
         alert.showAndWait();
     }
     
-    // METODO AGGIUNTO
+    /** Mostra un alert informativo */
     public static void mostraInfo(String titolo, String messaggio) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(titolo);
@@ -40,6 +42,7 @@ public class AlertHelper {
         alert.showAndWait();
     }
     
+    /** Richiede conferma per la cancellazione */
     public static boolean mostraConfermaCancellazione(String oggetto) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Conferma");

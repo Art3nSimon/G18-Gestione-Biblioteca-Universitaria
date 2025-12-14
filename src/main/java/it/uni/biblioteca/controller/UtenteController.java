@@ -1,5 +1,4 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
+/* * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -53,11 +52,12 @@ public class UtenteController {
     private Biblioteca biblioteca;
     private ObservableList<Utente> listaUtenti;
 
+    /** Inizializza il controller */
     @FXML
     public void initialize() {
         biblioteca = Biblioteca.getInstance();
         
-        // Setup colonne tabella
+        /** Setup colonne tabella */
         colonnaMatricola.setCellValueFactory(new PropertyValueFactory<>("matricola"));
         colonnaCognome.setCellValueFactory(new PropertyValueFactory<>("cognome"));
         colonnaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
@@ -68,7 +68,7 @@ public class UtenteController {
             )
         );
         
-        // Evidenzia utenti con limite prestiti raggiunto
+        /** Evidenzia utenti con limite prestiti raggiunto */
         tabellaUtenti.setRowFactory(tv -> new TableRow<Utente>() {
             @Override
             protected void updateItem(Utente utente, boolean empty) {
@@ -83,13 +83,13 @@ public class UtenteController {
             }
         });
         
-        // Setup combo criterio ricerca
+        /** Setup combo criterio ricerca */
         comboCriterio.setItems(FXCollections.observableArrayList(
             "COGNOME", "MATRICOLA"
         ));
         comboCriterio.getSelectionModel().selectFirst();
         
-        // Carica dati iniziali
+        /** Carica dati iniziali */
         aggiornaTabella();
     }
 
@@ -131,7 +131,7 @@ public class UtenteController {
             return;
         }
         
-        // Conferma cancellazione
+        /** Conferma cancellazione */
         if (!AlertHelper.mostraConfermaCancellazione(
                 "l'utente '" + selezionato.getNomeCognome() + "'")) {
             return;

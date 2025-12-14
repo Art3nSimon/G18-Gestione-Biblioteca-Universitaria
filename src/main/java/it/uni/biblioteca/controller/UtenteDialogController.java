@@ -30,6 +30,7 @@ public class UtenteDialogController {
     private Utente utenteCorrente;
     private boolean confermato = false;
     
+    /** Inizializza il controller */
     @FXML
     public void initialize() {
         biblioteca = Biblioteca.getInstance();
@@ -42,14 +43,14 @@ public class UtenteDialogController {
         this.utenteCorrente = utente;
         
         if (utente != null) {
-            // Modalità modifica - precompila i campi
+            /** Modalità modifica - precompila i campi */
             fieldNome.setText(utente.getNome());
             fieldCognome.setText(utente.getCognome());
             fieldMatricola.setText(utente.getMatricola());
-            fieldMatricola.setDisable(true); // Matricola non modificabile (IF-2.2)
+            fieldMatricola.setDisable(true); /** Matricola non modificabile (IF-2.2) */
             fieldEmail.setText(utente.getEmail());
             
-            // Mostra info prestiti
+            /** Mostra info prestiti */
             labelPrestitiAttivi.setText("Prestiti Attivi: " + 
                 utente.getNumeroPrestitiAttivi());
             labelPrestitiAttivi.setVisible(true);
@@ -63,7 +64,7 @@ public class UtenteDialogController {
             }
             labelStato.setVisible(true);
         } else {
-            // Modalità inserimento
+            /** Modalità inserimento */
             labelPrestitiAttivi.setVisible(false);
             labelStato.setVisible(false);
         }
@@ -75,7 +76,7 @@ public class UtenteDialogController {
     @FXML
     private void conferma() {
         try {
-            // Validazione input
+            /** Validazione input */
             String nome = fieldNome.getText().trim();
             String cognome = fieldCognome.getText().trim();
             String matricola = fieldMatricola.getText().trim();
@@ -94,7 +95,7 @@ public class UtenteDialogController {
                 throw new Exception("L'email è obbligatoria");
             }
             
-            // Validazione lunghezze (DF-1.2)
+            /** Validazione lunghezze (DF-1.2) */
             if (nome.length() > 50) {
                 throw new Exception("Nome troppo lungo (max 50 caratteri)");
             }
@@ -105,12 +106,12 @@ public class UtenteDialogController {
                 throw new Exception("Matricola troppo lunga (max 10 caratteri)");
             }
             
-            // Validazione formato email
+            /** Validazione formato email */
             if (!email.contains("@") || !email.contains(".")) {
                 throw new Exception("Formato email non valido");
             }
             
-            // Crea o modifica utente
+            /** Crea o modifica utente */
             if (utenteCorrente == null) {
                 // Nuovo utente
                 Utente nuovoUtente = new Utente(matricola, nome, cognome, email);

@@ -29,6 +29,7 @@ public class MainController {
     
     private String currentView = "";
     
+    /** Inizializza il controller */
     @FXML
     public void initialize() {
         // Carica la HOME di default invece di LibroView

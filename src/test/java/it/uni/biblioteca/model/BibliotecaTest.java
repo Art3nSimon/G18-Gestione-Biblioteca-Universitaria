@@ -26,6 +26,7 @@ public class BibliotecaTest {
     private Libro libro1;
     private Utente utente1;
     
+    /** Configurazione iniziale per ogni test */
     @BeforeEach
     public void setUp() {
         try {
@@ -42,6 +43,7 @@ public class BibliotecaTest {
         utente1 = new Utente("MAT001", "Mario", "Rossi", "mario@unisa.it");
     }
     
+    /** Pulisce i dati della biblioteca */
     private void pulisciBiblioteca() {
         List<Prestito> prestitiAttivi = biblioteca.getPrestitiAttivi();
         for (Prestito p : prestitiAttivi) {
@@ -66,7 +68,7 @@ public class BibliotecaTest {
         }
     }
     
-    //Test Singleton
+    /** Test Singleton */
     @Test
     public void testGetInstance() {
         Biblioteca b1 = Biblioteca.getInstance();
@@ -74,7 +76,7 @@ public class BibliotecaTest {
         assertSame(b1, b2);
     }
     
-    //Test Aggiungi Libro
+    /** Test Aggiungi Libro */
     @Test
     public void testAggiungiLibroValido() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -110,7 +112,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test Modifica Libro
+    /** Test Modifica Libro */
     @Test
     public void testModificaLibro() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -130,7 +132,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test Elimina Libro
+    /** Test Elimina Libro */
     @Test
     public void testEliminaLibro() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -150,7 +152,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test Cerca Libri
+    /** Test Cerca Libri */
     @Test
     public void testCercaLibriPerTitolo() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -180,7 +182,7 @@ public class BibliotecaTest {
         assertEquals("Clean Code", trovato.getTitolo());
     }
     
-    //Test Aggiungi Utente
+    /** Test Aggiungi Utente */
     @Test
     public void testAggiungiUtenteValido() throws Exception {
         biblioteca.aggiungiUtente(utente1);
@@ -213,7 +215,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test Modifica Utente
+    /** Test Modifica Utente */
     @Test
     public void testModificaUtente() throws Exception {
         biblioteca.aggiungiUtente(utente1);
@@ -223,7 +225,7 @@ public class BibliotecaTest {
         assertEquals("nuovo@unisa.it", trovato.getEmail());
     }
     
-    //Test Elimina Utente
+    /** Test Elimina Utente */
     @Test
     public void testEliminaUtente() throws Exception {
         biblioteca.aggiungiUtente(utente1);
@@ -242,7 +244,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test Cerca Utente
+    /** Test Cerca Utente */
     @Test
     public void testCercaUtentiPerCognome() throws Exception {
         biblioteca.aggiungiUtente(utente1);
@@ -257,7 +259,7 @@ public class BibliotecaTest {
         assertEquals(1, risultati.size());
     }
     
-    //Test Registra Prestito
+    /** Test Registra Prestito */
     @Test
     public void testRegistraPrestitoValido() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -305,7 +307,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test Registra e Restituzione
+    /** Test Registra e Restituzione */
     @Test
     public void testRegistraRestituzione() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -331,7 +333,7 @@ public class BibliotecaTest {
         });
     }
     
-    //Test GetPrestitiAttivi
+    /** Test GetPrestitiAttivi */
     @Test
     public void testGetPrestitiAttivi() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -341,7 +343,7 @@ public class BibliotecaTest {
         assertTrue(prestiti.size() > 0);
     }
     
-    // Test per coprire il caso in cui modificaUtente non trova l'utente
+    /** Test per coprire il caso in cui modificaUtente non trova l'utente */
     @Test
     public void testModificaUtenteNonEsistente() {
         Utente utente = new Utente("MAT999", "Test", "Test", "test@unisa.it");
@@ -350,21 +352,21 @@ public class BibliotecaTest {
         });
     }
 
-    // Test ordinamento libri vuoto
+    /** Test ordinamento libri vuoto */
     @Test
     public void testGetTuttiLibriVuoto() {
         List<Libro> libri = biblioteca.getTuttiLibri();
         assertEquals(0, libri.size());
     }
 
-    // Test ordinamento utenti vuoto
+    /** Test ordinamento utenti vuoto */
     @Test
     public void testGetTuttiUtentiVuoto() {
         List<Utente> utenti = biblioteca.getTuttiUtenti();
         assertEquals(0, utenti.size());
     }
 
-    // Test limite prestiti raggiunto
+    /** Test limite prestiti raggiunto */
     @Test
     public void testRegistraPrestitoLimiteRaggiunto() throws Exception {
         biblioteca.aggiungiLibro(libro1);
@@ -389,21 +391,21 @@ public class BibliotecaTest {
         });
     }
 
-    // Test per testare il salvataggio dati
+    /** Test per testare il salvataggio dati */
     @Test
     public void testSalvaDati() throws Exception {
         biblioteca.aggiungiLibro(libro1);
         assertNotNull(biblioteca.cercaLibroPerIsbn("ISBN001"));
     }
 
-    // Test caricamento dati
+    /** Test caricamento dati */
     @Test
     public void testCaricaDati() {
         biblioteca.caricaDati();
         assertNotNull(biblioteca);
     }
     
-    //Test Performance
+    /** Test Performance */
     @Test
     public void testPerformanceAggiungi100Libri() throws Exception {
         long startTime = System.currentTimeMillis();

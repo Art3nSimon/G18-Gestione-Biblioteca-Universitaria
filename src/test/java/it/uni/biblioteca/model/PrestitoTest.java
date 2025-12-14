@@ -23,6 +23,7 @@ public class PrestitoTest {
     private Libro libro;
     private Prestito prestito;
     
+    /** Inizializzazione dati */
     @BeforeEach
     public void setUp() {
         utente = new Utente("12345", "Mario", "Rossi", "mario@unisa.it");
@@ -30,7 +31,7 @@ public class PrestitoTest {
         prestito = new Prestito(utente, libro, LocalDate.now().plusDays(14));
     }
     
-    //Test Costruttore Prestito
+    /** Test Costruttore Prestito */
     @Test
     public void testCostruttore() {
         assertNotNull(prestito.getId());
@@ -41,7 +42,7 @@ public class PrestitoTest {
         assertNull(prestito.getDataRestituzioneEffettiva());
     }
     
-    //Test Get Prestito
+    /** Test Get Prestito */
     @Test
     public void testGetDataRestituzionePrevista() {
         assertEquals(LocalDate.now().plusDays(14), prestito.getDataRestituzionePrevista());
@@ -59,7 +60,7 @@ public class PrestitoTest {
         assertNotEquals(prestito.getId(), prestito2.getId());
     }
     
-    //Test IsAttivo
+    /** Test IsAttivo */
     @Test
     public void testIsAttivoIniziale() {
         assertTrue(prestito.isAttivo());
@@ -71,7 +72,7 @@ public class PrestitoTest {
         assertFalse(prestito.isAttivo());
     }
     
-    //Test IsInRitardo
+    /** Test IsInRitardo */
     @Test
     public void testIsInRitardoFalse() {
         Prestito p = new Prestito(utente, libro, LocalDate.now().plusDays(7));
@@ -97,7 +98,7 @@ public class PrestitoTest {
         assertFalse(p.isInRitardo());
     }
     
-    //Test Giorni ritardo
+    /** Test Giorni ritardo */
     @Test
     public void testGetGiorniRitardoZero() {
         Prestito p = new Prestito(utente, libro, LocalDate.now().plusDays(7));
@@ -110,7 +111,7 @@ public class PrestitoTest {
         assertEquals(5, p.getGiorniRitardo());
     }
     
-    //Test Giorni allo scadere
+    /** Test Giorni allo scadere */
     @Test
     public void testGetGiorniAllaScadenza() {
         Prestito p = new Prestito(utente, libro, LocalDate.now().plusDays(7));
@@ -123,7 +124,7 @@ public class PrestitoTest {
         assertEquals(0, prestito.getGiorniAllaScadenza());
     }
     
-    //Test Registrazione Prestito
+    /** Test Registrazione Prestito */
     @Test
     public void testRegistraRestituzione() {
         assertNull(prestito.getDataRestituzioneEffettiva());
@@ -134,7 +135,7 @@ public class PrestitoTest {
         assertEquals(LocalDate.now(), prestito.getDataRestituzioneEffettiva());
     }
     
-    //Test Stato Descrizione
+    /** Test Stato Descrizione */
     @Test
     public void testGetStatoDescrizioneCHIUSO() {
         prestito.registraRestituzione();
@@ -162,8 +163,7 @@ public class PrestitoTest {
         assertTrue(stato.startsWith("ATTIVO"));
     }
     
-    //Test Equals Prestito
-    
+    /** Test Equals Prestito */
     @Test
     public void testEqualsStessoOggetto() {
         assertTrue(prestito.equals(prestito));
@@ -186,7 +186,7 @@ public class PrestitoTest {
         assertFalse(prestito.equals(p2));
     }
     
-    //Test HashCode Utente
+    /** Test HashCode Utente */
     @Test
     public void testHashCodeDiversi() throws InterruptedException {
         Prestito p1 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
@@ -195,7 +195,7 @@ public class PrestitoTest {
         assertNotEquals(p1.hashCode(), p2.hashCode());
     }
     
-    //Test ToString Prestito
+    /** Test ToString Prestito */
     @Test
     public void testToString() {
         String str = prestito.toString();
@@ -203,7 +203,7 @@ public class PrestitoTest {
         assertTrue(str.contains("Il Signore degli Anelli"));
     }
     
-    // Test per verificare che non vengano aggiunti prestiti duplicati
+    /** Test per verificare che non vengano aggiunti prestiti duplicati */
     @Test
     public void testAggiungiPrestitoDuplicato() {
         Libro libro = new Libro("ISBN1", "Libro 1", 2020, 3);
@@ -214,7 +214,7 @@ public class PrestitoTest {
         assertEquals(1, utente.getNumeroPrestitiAttivi());
     }
 
-    // Test equals con classe diversa
+    /** Test equals con classe diversa */
     @Test
     public void testEqualsClasseDiversa() {
         assertFalse(utente.equals("stringa"));

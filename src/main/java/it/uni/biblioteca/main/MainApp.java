@@ -25,23 +25,23 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Carica dati all'avvio
+            /** Carica dati all'avvio */
             biblioteca = Biblioteca.getInstance();
             biblioteca.caricaDati();
             
-            // Carica FXML
+            /** Carica FXML */
             FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("/fxml/MainView.fxml")
             );
             Parent root = loader.load();
             
-            // Configura scena
+            /** Configura scena */
             Scene scene = new Scene(root, 1200, 800);
             scene.getStylesheets().add(
                 getClass().getResource("/css/styles.css").toExternalForm()
             );
             
-            // Configura stage
+            /** Configura stage */
             primaryStage.setTitle("Sistema Gestione Biblioteca Universitaria");
             primaryStage.setScene(scene);
             primaryStage.setMinWidth(1000);
@@ -56,7 +56,7 @@ public class MainApp extends Application {
     
     @Override
     public void stop() {
-        // Salva dati alla chiusura
+        /** Salva dati alla chiusura */
         if (biblioteca != null) {
             biblioteca.salvaDati();
             System.out.println("Dati salvati alla chiusura");

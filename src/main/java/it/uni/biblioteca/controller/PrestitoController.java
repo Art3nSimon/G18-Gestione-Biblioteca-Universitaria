@@ -44,11 +44,12 @@ public class PrestitoController {
     private Biblioteca biblioteca;
     private ObservableList<Prestito> listaPrestiti;
     
+    /** Inizializza il controller */
     @FXML
     public void initialize() {
         biblioteca = Biblioteca.getInstance();
         
-        // Setup colonne tabella
+        /** Setup colonne tabella */
         colonnaUtente.setCellValueFactory(cellData -> 
             new SimpleStringProperty(
                 cellData.getValue().getUtente().getNomeCognome() + 
@@ -76,7 +77,7 @@ public class PrestitoController {
             )
         );
         
-        // Evidenzia prestiti in ritardo (UI-1.5)
+        /** Evidenzia prestiti in ritardo (UI-1.5) */
         tabellaPrestiti.setRowFactory(tv -> new TableRow<Prestito>() {
             @Override
             protected void updateItem(Prestito prestito, boolean empty) {
@@ -96,17 +97,18 @@ public class PrestitoController {
             }
         });
         
-        // Carica dati iniziali
+        /** Carica dati iniziali */
         aggiornaTabella();
     }
-        /**
+
+    /**
      * Apre il dialog per registrare un nuovo prestito
      * Requisito: UC-11
      */
     @FXML
     private void registraPrestito() {
         try {
-            // Crea dialog personalizzato (inline, senza FXML separato)
+            /** Crea dialog personalizzato (inline, senza FXML separato) */
             Dialog<Prestito> dialog = new Dialog<>();
             dialog.setTitle("Registra Nuovo Prestito");
             dialog.setHeaderText("Inserisci i dati del prestito");
@@ -115,7 +117,7 @@ public class PrestitoController {
             ButtonType confermaButtonType = new ButtonType("Conferma", ButtonBar.ButtonData.OK_DONE);
             dialog.getDialogPane().getButtonTypes().addAll(confermaButtonType, ButtonType.CANCEL);
             
-            // Crea form
+            /** Crea form */
             GridPane grid = new GridPane();
             grid.setHgap(10);
             grid.setVgap(10);
@@ -142,7 +144,7 @@ public class PrestitoController {
             Label infoUtente = new Label();
             Label infoLibro = new Label();
             
-            // Aggiorna info quando selezionato
+            /** Aggiorna info quando selezionato */
             comboUtente.setOnAction(e -> {
                 Utente u = comboUtente.getValue();
                 if (u != null) {
@@ -186,7 +188,7 @@ public class PrestitoController {
             
             dialog.getDialogPane().setContent(grid);
             
-            // Converti result
+            /** Converti result */
             dialog.setResultConverter(dialogButton -> {
                 if (dialogButton == confermaButtonType) {
                     try {
@@ -238,7 +240,7 @@ public class PrestitoController {
             return;
         }
         
-        // Mostra dialog di conferma con dettagli
+        /** Mostra dialog di conferma con dettagli */
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Conferma Restituzione");
         alert.setHeaderText("Confermi la restituzione del seguente prestito?");
@@ -278,14 +280,14 @@ public class PrestitoController {
     private void aggiornaTabella() {
         List<Prestito> prestiti = biblioteca.getPrestitiAttivi();
         
-        //Ordina per data restituzione prevista
+        /** Ordina per data restituzione prevista */
         prestiti.sort((p1, p2) ->
                 p1.getDataRestituzionePrevista().compareTo(p2.getDataRestituzionePrevista())
         );
         
         listaPrestiti = FXCollections.observableArrayList(prestiti);
         tabellaPrestiti.setItems(listaPrestiti);
-        // Aggiorna statistiche
+        /** Aggiorna statistiche */
         aggiornaStatistiche();
     }
     
@@ -305,7 +307,7 @@ public class PrestitoController {
         labelRitardi.setText("Prestiti in Ritardo: " + ritardi);
         labelScadenza.setText("In Scadenza (entro 2gg): " + inScadenza);
         
-        // Colora label ritardi se > 0
+        /** Colora label ritardi se > 0 */
         if (ritardi > 0) {
             labelRitardi.setStyle("-fx-text-fill: #c62828; -fx-font-weight: bold;");
         } else {

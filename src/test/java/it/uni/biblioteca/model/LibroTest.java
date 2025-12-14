@@ -19,12 +19,13 @@ public class LibroTest {
     
     private Libro libro;
     
+    /** Inizializzazione dati */
     @BeforeEach
     public void setUp() {
         libro = new Libro("ISBN123", "Il Signore degli Anelli", 1954, 5);
     }
     
-    //Test Costruttore Libro
+    /** Test Costruttore Libro */
     @Test
     public void testCostruttore() {
         assertEquals("ISBN123", libro.getIsbn());
@@ -46,7 +47,7 @@ public class LibroTest {
         assertEquals(0, libro2.getNumeroCopieDisponibili());
     }
     
-    //Test Get Autore
+    /** Test Get Autore */
     @Test
     public void testAggiungiAutore() {
         Autore autore = new Autore("J.R.R.", "Tolkien");
@@ -76,7 +77,7 @@ public class LibroTest {
         assertEquals("", libro.getAutoriAsString());
     }
     
-    //Test Disponibilità
+    /** Test Disponibilità */
     @Test
     public void testIsDisponibile() {
         assertTrue(libro.isDisponibile());
@@ -88,7 +89,7 @@ public class LibroTest {
         assertFalse(libro2.isDisponibile());
     }
     
-    //Test Decrementa Copie
+    /** Test Decrementa Copie */
     @Test
     public void testDecrementaCopie() {
         libro.decrementaCopie();
@@ -111,7 +112,7 @@ public class LibroTest {
         assertEquals(0, libro.getNumeroCopieDisponibili());
     }
     
-    //Test Incrementa Copie
+    /** Test Incrementa Copie */
     @Test
     public void testIncrementaCopie() {
         libro.decrementaCopie();
@@ -125,7 +126,7 @@ public class LibroTest {
         assertEquals(5, libro.getNumeroCopieDisponibili());
     }
     
-    //Test Setter Libro
+    /** Test Setter Libro */
     @Test
     public void testSetTitolo() {
         libro.setTitolo("Nuovo Titolo");
@@ -138,7 +139,7 @@ public class LibroTest {
         assertEquals(2023, libro.getAnnoPubblicazione());
     }
     
-    //Test Metodi Autore
+    /** Test Metodi Autore */
     @Test
     public void testAutoreCostruttore() {
         Autore autore = new Autore("Mario", "Rossi");
@@ -151,7 +152,8 @@ public class LibroTest {
         Autore autore = new Autore("Mario", "Rossi");
         assertEquals("Rossi Mario", autore.toString());
     }
-    // Test per l'autore con getters
+    
+    /** Test per l'autore con getters */
     @Test
     public void testAutoreGetters() {
         Autore autore = new Autore("Mario", "Rossi");
