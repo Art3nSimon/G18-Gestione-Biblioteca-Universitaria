@@ -1,0 +1,16 @@
+<map id="it.uni.biblioteca.model.Prestito.toString" name="it.uni.biblioteca.model.Prestito.toString">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,157,136"/>
+<area shape="rect" id="Node000002" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#aeb4fff51b529869750d69696b0ddaa15" title=" " alt="" coords="205,93,393,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,112,191,114,186,115,157,117"/>
+<area shape="rect" id="Node000003" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#a0e576415ac4799a7741fa359de8e459e" title=" " alt="" coords="653,5,856,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,90,440,64,541,45,640,35,635,36,542,51,442,69,357,95"/>
+<area shape="rect" id="Node000004" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#aa90763fc51dd31d188a76427e9d074bb" title=" " alt="" coords="904,64,1055,107"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="393,108,888,87,887,92,394,113"/>
+<area shape="rect" id="Node000005" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#a90764a730b6c567ae6e005acc8764a0f" title=" " alt="" coords="441,123,605,165"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="394,124,428,131,423,131,394,130"/>
+<area shape="rect" id="Node000006" href="$classit_1_1uni_1_1biblioteca_1_1model_1_1_prestito.html#a77f2ce60cd3f63c98c79dd3581277a1c" title=" " alt="" coords="679,123,830,165"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="338,134,387,157,442,175,498,182,557,181,613,175,661,169,667,168,614,180,557,186,498,187,440,180,385,162,337,139"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="839,46,892,62,886,62,838,51"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="606,141,666,144,661,144,606,147"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="830,122,886,109,891,109,831,127"/>
+</map>
