@@ -5,6 +5,7 @@ In questa cartella saranno inseriti tutti i documenti relativi al progetto.
 ## Contenuti
 
 - Documento di Specifica dei Requisiti Software
+- Documento di Design
 
 
 ## Note
