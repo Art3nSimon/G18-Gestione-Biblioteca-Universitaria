@@ -89,10 +89,11 @@ public class MainController {
         alert.setTitle("Informazioni");
         alert.setHeaderText("Sistema Gestione Biblioteca Universitaria");
         alert.setContentText(
-            "Versione: 1.0\n" +
+            "Versione: 2.0\n" +
             "Corso: Ingegneria del Software\n" +
             "Gruppo: 18\n" +
-            "Anno: 2025"
+            "Studenti: Simona Spagnuolo\n               Armando Incolingo\n               Matteo Trivellone\n"
+            "Anno Accademico: 2025-2026"
         );
         alert.showAndWait();
     }

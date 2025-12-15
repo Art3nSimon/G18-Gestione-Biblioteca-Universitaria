@@ -142,4 +142,12 @@ public class Libro implements Serializable{
         }
         return sb.toString();
     }
+  /**
+     * Restituisce una rappresentazione testuale del libro
+     * Usato per visualizzare il libro nei ComboBox
+     */
+    @Override
+    public String toString() {
+        return titolo + " - " + getAutoriAsString() + " (" + annoPubblicazione + ")";
+    }
 }

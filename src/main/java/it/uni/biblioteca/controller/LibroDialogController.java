@@ -108,6 +108,11 @@ public class LibroDialogController {
             if (isbn.isEmpty()) {
                 throw new Exception("L'ISBN è obbligatorio");
             }
+            
+            if (isbn.length() > 20) {
+                throw new Exception("L'ISBN deve essere di massimo 20 caratteri");
+            }
+            
             if (autori.isEmpty()) {
                 throw new Exception("Inserisci almeno un autore");
             }

@@ -68,7 +68,7 @@
                 </padding>
             </Label>
             
-            <Button text="ℹ️ Info" 
+            <Button text="ℹ Info" 
                     onAction="#mostraInformazioni"
                     styleClass="nav-button-secondary"
                     maxWidth="Infinity"/>
