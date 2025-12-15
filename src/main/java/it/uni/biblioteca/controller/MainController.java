@@ -55,6 +55,9 @@ public class MainController {
         if (caricaSchermata("/fxml/LibroView.fxml")) {
             currentView = "LIBRI";
             evidenziaBottoneAttivo(btnLibri);
+            System.out.println("Vista 'Gestione Libri' caricata con successo.");
+        } else {
+             System.out.println("Errore nel caricamento della vista 'Gestione Libri'.");
         }
     }
     
@@ -92,7 +95,7 @@ public class MainController {
             "Versione: 2.0\n" +
             "Corso: Ingegneria del Software\n" +
             "Gruppo: 18\n" +
-            "Studenti: Simona Spagnuolo\n               Armando Incolingo\n               Matteo Trivellone\n"
+            "Studenti: Simona Spagnuolo\n               Armando Incolingo\n               Matteo Trivellone\n"+
             "Anno Accademico: 2025-2026"
         );
         alert.showAndWait();

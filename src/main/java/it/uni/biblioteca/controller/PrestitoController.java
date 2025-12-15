@@ -30,7 +30,7 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class PrestitoController {
     
-    @FXML private TableView<Prestito> tabellaPrestiti;
+    @FXML public TableView<Prestito> tabellaPrestiti;
     @FXML private TableColumn<Prestito, String> colonnaUtente;
     @FXML private TableColumn<Prestito, String> colonnaLibro;
     @FXML private TableColumn<Prestito, LocalDate> colonnaDataPrestito;

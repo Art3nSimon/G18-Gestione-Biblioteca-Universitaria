@@ -30,7 +30,7 @@ import java.util.List;
 public class LibroController {
     
     @FXML
-    private TableView<Libro> tabellaLibri;
+    public TableView<Libro> tabellaLibri;
     
     @FXML
     private TableColumn<Libro, String> colonnaTitolo;

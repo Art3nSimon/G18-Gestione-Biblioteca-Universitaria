@@ -26,7 +26,7 @@ import java.util.List;
 public class UtenteController {
 
     @FXML
-    private TableView<Utente> tabellaUtenti;
+    public TableView<Utente> tabellaUtenti;
     
     @FXML
     private TableColumn<Utente, String> colonnaMatricola;
