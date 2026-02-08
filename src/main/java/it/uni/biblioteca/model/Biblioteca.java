@@ -142,7 +142,6 @@ public class Biblioteca implements Serializable {
     
     /** Elimina utente per matricola */
     public void eliminaUtente(String matricola) throws Exception {
-        // Verifica nessun prestito attivo
         for (Prestito p : prestiti) {
             if (p.isAttivo() && p.getUtente().getMatricola().equals(matricola)) {
                 throw new Exception("Impossibile eliminare: prestiti attivi");
