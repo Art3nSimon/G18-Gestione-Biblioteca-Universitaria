@@ -14,6 +14,7 @@ import java.util.List;
  * @author Matteo
  */
 public class Libro implements Serializable{
+    private static final long serialVersionUID = 1L;
     
     /** Classe annidata Autore */
     public static class Autore implements Serializable{

@@ -5,9 +5,6 @@
  */
 package it.uni.biblioteca.model;
 
-import it.uni.biblioteca.model.Libro;
-import it.uni.biblioteca.model.Prestito;
-import it.uni.biblioteca.model.Utente;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
