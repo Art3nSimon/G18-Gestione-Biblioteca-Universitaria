@@ -231,7 +231,7 @@ public class Biblioteca implements Serializable {
     /** Restituisce i prestiti attivi ordinati */
     public List<Prestito> getPrestitiAttivi() {
         List<Prestito> attivi = prestiti.stream()
-            .filter(Prestito::isAttivo)
+            .filter(p -> p.isAttivo())
             .collect(Collectors.toList());
         attivi.sort((p1, p2) -> 
             p1.getDataRestituzionePrevista().compareTo(p2.getDataRestituzionePrevista())
