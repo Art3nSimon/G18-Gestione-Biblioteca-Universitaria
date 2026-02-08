@@ -206,17 +206,17 @@ public class PrestitoTest {
     /** Test per verificare che non vengano aggiunti prestiti duplicati */
     @Test
     public void testAggiungiPrestitoDuplicato() {
-        Libro libro = new Libro("ISBN1", "Libro 1", 2020, 3);
-        Prestito prestito = new Prestito(utente, libro, LocalDate.now().plusDays(7));
+        Libro libro1 = new Libro("ISBN1", "Libro 1", 2020, 3);
+        Prestito prestito1 = new Prestito(utente, libro1, LocalDate.now().plusDays(7));
 
         utente.aggiungiPrestito(prestito);
-        utente.aggiungiPrestito(prestito); 
+        utente.aggiungiPrestito(prestito1); 
         assertEquals(1, utente.getNumeroPrestitiAttivi());
     }
 
     /** Test equals con classe diversa */
     @Test
     public void testEqualsClasseDiversa() {
-        assertFalse(utente.equals("stringa"));
+        assertFalse(prestito.equals("stringa"));
     }
 }
