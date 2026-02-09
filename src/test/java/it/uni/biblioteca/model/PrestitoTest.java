@@ -49,13 +49,9 @@ public class PrestitoTest {
     }
     
     @Test
-    public void testIdUnivoco() {
+    public void testIdUnivoco() throws InterruptedException{
         Prestito prestito1 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
-        
-        try {
-            Thread.sleep(10); //Attende 10 millisecondi
-        } catch (InterruptedException e){}
-        
+        Thread.sleep(10);
         Prestito prestito2 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
         assertNotEquals(prestito.getId(), prestito2.getId());
     }
