@@ -51,7 +51,7 @@ public class PrestitoTest {
     @Test
     public void testIdUnivoco() throws InterruptedException{
         Prestito prestito1 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
-        Thread.sleep(10);
+        Thread.sleep(2);
         Prestito prestito2 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
         assertNotEquals(prestito.getId(), prestito2.getId());
     }
@@ -171,13 +171,9 @@ public class PrestitoTest {
     }
     
     @Test
-    public void testEqualsIdDiversi() {
+    public void testEqualsIdDiversi() throws InterruptedException{
         Prestito p1 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
-        
-        try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {}
-        
+        Thread.sleep(2);
         Prestito p2 = new Prestito(utente, libro, LocalDate.now().plusDays(14));
         assertFalse(prestito.equals(p2));
     }
