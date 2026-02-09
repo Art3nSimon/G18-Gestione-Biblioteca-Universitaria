@@ -44,7 +44,7 @@ public class LibroTest {
     @Test
     public void testCostruttoreZeroCopie() {
         Libro libro2 = new Libro("ISBN789", "Test", 2020, 0);
-        assertEquals(0, libro2.getNumeroCopieDisponibili());
+        assertEquals(0, libro2.getNumeroCopieTotali());
     }
     
     /** Test Get Autore */
