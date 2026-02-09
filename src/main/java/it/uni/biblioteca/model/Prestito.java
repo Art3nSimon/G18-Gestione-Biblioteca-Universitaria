@@ -132,10 +132,6 @@ public class Prestito implements Serializable{
     
     @Override
     public String toString() {
-        return "Prestito{" +
-                "utente=" + utente.getNomeCognome() +
-                ", libro=" + libro.getTitolo() +
-                ", stato=" + getStatoDescrizione() +
-                '}';
+        return "Prestito{utente=" + utente.getNomeCognome() + ", libro=" + libro.getTitolo() + ", stato=" + getStatoDescrizione() + "}";
     }
 }
