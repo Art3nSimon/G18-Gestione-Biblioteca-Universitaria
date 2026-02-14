@@ -37,35 +37,9 @@ public class BibliotecaTest {
             e.printStackTrace();
         }
         biblioteca = Biblioteca.getInstance();
-        pulisciBiblioteca();
         libro1 = new Libro("ISBN001", "Clean Code", 2008, 3);
         libro1.aggiungiAutore(new Autore("Robert", "Martin"));
         utente1 = new Utente("MAT001", "Mario", "Rossi", "mario@unisa.it");
-    }
-    
-    /** Pulisce i dati della biblioteca */
-    private void pulisciBiblioteca() {
-        List<Prestito> prestitiAttivi = biblioteca.getPrestitiAttivi();
-        for (Prestito p : prestitiAttivi) {
-            try {
-                biblioteca.registraRestituzione(p);
-            } catch (Exception e) {
-            }
-        }
-        List<Utente> utenti = biblioteca.getTuttiUtenti();
-        for (Utente u : utenti) {
-            try {
-                biblioteca.eliminaUtente(u.getMatricola());
-            } catch (Exception e) {
-            }
-        }
-        List<Libro> libri = biblioteca.getTuttiLibri();
-        for (Libro l : libri) {
-            try {
-                biblioteca.eliminaLibro(l.getIsbn());
-            } catch (Exception e) {
-            }
-        }
     }
     
     /** Test Singleton */
