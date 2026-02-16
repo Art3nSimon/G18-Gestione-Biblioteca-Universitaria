@@ -56,7 +56,7 @@ public class Utente implements Serializable{
     
     /** Restituisce la lista dei prestiti attivi */
     public List<Prestito> getPrestitiAttivi() {
-        return new ArrayList<>(prestitiAttivi);
+        return prestitiAttivi;
     }
     
     /** Restituisce il numero di prestiti in corso */
