@@ -31,7 +31,7 @@ public class Biblioteca implements Serializable {
         this.prestiti = new ArrayList<>();
     }
     
-    /** Metodo get Biblioteca (Singleton) */
+    /** Metodo get Biblioteca */
     public static Biblioteca getInstance() {
         if (instance == null) {
             instance = new Biblioteca();
