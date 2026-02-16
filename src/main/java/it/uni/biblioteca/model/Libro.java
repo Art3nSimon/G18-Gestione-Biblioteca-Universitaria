@@ -136,7 +136,7 @@ public class Libro implements Serializable{
     
     /** Restituisce gli autori come stringa formattata */
     public String getAutoriAsString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuffer sb = new StringBuffer();
         for (int i = 0; i < autori.size(); i++) {
             sb.append(autori.get(i).toString());
             if (i < autori.size() - 1) sb.append(", ");
