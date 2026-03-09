@@ -104,7 +104,7 @@ public class UtenteController {
 
     /**
      * Apre il dialog per modificare l'utente selezionato
-     * Requisito: UC-7
+     * Requisito: UC-7. Hello world
      */
     @FXML
     private void modificaUtente() {
